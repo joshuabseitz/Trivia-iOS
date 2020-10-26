@@ -24,3 +24,4 @@ My solution to this coding challenge was built in XCode 12 with Swift, using UIK
 	 * Perhaps a more formal requirements document
 	 * Perhaps a UML that will promote OO development
 * What are the odds that I get this submitted to the the App Store ahead of the deadline? heh
+* Use CoreData to score highscores!!!
