@@ -17,5 +17,19 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 	}
 	
+	func saveHighscore() {
+		
+		// store user name
+		// store highscore
+		
+		// create highscore
+		
+		// highscore.name = ""
+		// highscore.score = 00
+		
+		// print("Created highscore: \(highscore)")
+		
+	}
+	
 }
 

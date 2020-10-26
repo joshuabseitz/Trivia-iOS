@@ -4,7 +4,13 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="score" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
+    <entity name="Question" representedClassName="Question" syncable="YES" codeGenerationType="class">
+        <attribute name="answer" optional="YES"/>
+        <attribute name="choices" optional="YES"/>
+        <attribute name="question" optional="YES"/>
+    </entity>
     <elements>
         <element name="Highscore" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="Question" positionX="-54" positionY="9" width="128" height="88"/>
     </elements>
 </model>
