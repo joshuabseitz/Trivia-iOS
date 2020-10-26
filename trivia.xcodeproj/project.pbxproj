@@ -46,6 +46,7 @@
 				5755139225476E8000F48695 /* Products */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 0;
 		};
 		5755139225476E8000F48695 /* Products */ = {
 			isa = PBXGroup;

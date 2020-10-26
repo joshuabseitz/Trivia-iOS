@@ -1,0 +1,16 @@
+# Tandem Apprentice Software Engineer
+This is my entry for Tandem's 2020 Apprentice Software Engineer Code Challenge. It heeds to the following requirements, which were outlined in this [deck](https://madeintandem.com/wp-content/uploads/2020/10/Tandem_Apprentice_Challenge_2020.zip).
+
+## Assumptions
+* Round of triva has 10 questions
+* All questions are multiple-choice questions
+* Score does not need to update in realtime
+* Results can update on form submit, button click, or any interaction you choose
+* We will provide you with the triva data, such as the questions, correct and incorrect answers via a JSON file
+
+## Acceptance Criteria
+* User can view questions
+* Questions with their multiple choice options must be displayed one at a time
+* User can select only 1 anwser out of 4 possible answers
+* Correct answer must be revealed after a suser has submitted their answer
+* User can see the score they recieved at the end of the round
