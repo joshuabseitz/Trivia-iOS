@@ -9,6 +9,13 @@
 import Foundation
 
 struct Questions: Decodable {
+	
+	init(question: String, incorrect: [String], correct: String){
+		self.question = question
+		self.incorrect = incorrect
+		self.correct = correct
+	}
+	
 	let question: String
 	let incorrect: [String]
 	let correct: String

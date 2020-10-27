@@ -16,8 +16,8 @@
 		575513A425476E8400F48695 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 575513A225476E8400F48695 /* LaunchScreen.storyboard */; };
 		575513B22547817000F48695 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575513B12547817000F48695 /* PersistenceController.swift */; };
 		575514032548A3D100F48695 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575514022548A3D100F48695 /* Questions.swift */; };
-		575514162548AE6500F48695 /* MathStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575514152548AE6500F48695 /* MathStuff.swift */; };
 		5755145E2548B25300F48695 /* triviaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755145D2548B25300F48695 /* triviaTests.swift */; };
+		57C54E4A2548CFA500B8EF60 /* ChoiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C54E492548CFA500B8EF60 /* ChoiceButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,10 +42,10 @@
 		575513A525476E8400F48695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		575513B12547817000F48695 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		575514022548A3D100F48695 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
-		575514152548AE6500F48695 /* MathStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathStuff.swift; sourceTree = "<group>"; };
 		5755145B2548B25300F48695 /* triviaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = triviaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5755145D2548B25300F48695 /* triviaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = triviaTests.swift; sourceTree = "<group>"; };
 		5755145F2548B25300F48695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57C54E492548CFA500B8EF60 /* ChoiceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,13 +90,13 @@
 			children = (
 				575513B02547813C00F48695 /* Model */,
 				5755139425476E8000F48695 /* AppDelegate.swift */,
-				575514152548AE6500F48695 /* MathStuff.swift */,
 				5755139625476E8000F48695 /* SceneDelegate.swift */,
 				5755139825476E8000F48695 /* ViewController.swift */,
 				5755139A25476E8000F48695 /* Main.storyboard */,
 				575513A025476E8400F48695 /* Assets.xcassets */,
 				575513A225476E8400F48695 /* LaunchScreen.storyboard */,
 				575513A525476E8400F48695 /* Info.plist */,
+				57C54E492548CFA500B8EF60 /* ChoiceButton.swift */,
 			);
 			path = trivia;
 			sourceTree = "<group>";
@@ -224,10 +224,10 @@
 				5755139925476E8000F48695 /* ViewController.swift in Sources */,
 				5755139525476E8000F48695 /* AppDelegate.swift in Sources */,
 				5755139F25476E8000F48695 /* trivia.xcdatamodeld in Sources */,
-				575514162548AE6500F48695 /* MathStuff.swift in Sources */,
 				575514032548A3D100F48695 /* Questions.swift in Sources */,
 				5755139725476E8000F48695 /* SceneDelegate.swift in Sources */,
 				575513B22547817000F48695 /* PersistenceController.swift in Sources */,
+				57C54E4A2548CFA500B8EF60 /* ChoiceButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
