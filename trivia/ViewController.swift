@@ -8,29 +8,32 @@
 
 import UIKit
 
-//MARK: - View Lifecyclces
-
 class ViewController: UIViewController {
 	
 	
 	override func viewDidLoad() {
+		
 		super.viewDidLoad()
+			
+		//JSON Setup
+		let JSON = """
+		{
+			"question": "In Shakespeare's play Julius Caesar, Caesar's last words were...",
+			"incorrect": ["Iacta alea est!", "Vidi, vini, vici", "Aegri somnia vana"],
+			"correct": "Et tu, Brute?"
+		}
+		"""
+
+		let jsonData = JSON.data(using: .utf8)!
+		let question: Question = try! JSONDecoder().decode(Question.self, from: jsonData)
+
+		print(question.question) // Prints: "Optionals in Swift explained: 5 things you should know"
 		
 	}
-	
-	func saveHighscore() {
-		
-		// store user name
-		// store highscore
-		
-		// create highscore
-		
-		// highscore.name = ""
-		// highscore.score = 00
-		
-		// print("Created highscore: \(highscore)")
-		
-	}
-	
 }
 
+struct Question: Decodable {
+    let question: String
+	let incorrect: [String]
+	let correct: String
+}
