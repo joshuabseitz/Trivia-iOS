@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
 	
-	
 	override func viewDidLoad() {
 		
 		super.viewDidLoad()
@@ -26,7 +25,7 @@ class ViewController: UIViewController {
 				let questions = try JSONDecoder().decode([Questions].self, from: data!) // force unwrap is bad practice
 				self.updateQuestions(questions)
 			} catch {
-				print("There was an error finding the data!")
+				self.jsonNotFound()
 			}
 			
 		}.resume()
@@ -34,5 +33,9 @@ class ViewController: UIViewController {
 	
 	func updateQuestions(_ questions: [Questions]) {
 		print(questions)
+	}
+	
+	func jsonNotFound() {
+		print("JSON not found")
 	}
 }
