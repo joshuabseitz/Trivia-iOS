@@ -34,11 +34,3 @@ class ViewController: UIViewController {
 		}.resume()
 	}
 }
-
-struct Questions: Decodable
-{
-	let question: String
-	let incorrect: [String]
-	let correct: String
-}
-
