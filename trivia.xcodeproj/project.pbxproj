@@ -16,7 +16,19 @@
 		575513A425476E8400F48695 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 575513A225476E8400F48695 /* LaunchScreen.storyboard */; };
 		575513B22547817000F48695 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575513B12547817000F48695 /* PersistenceController.swift */; };
 		575514032548A3D100F48695 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575514022548A3D100F48695 /* Questions.swift */; };
+		575514162548AE6500F48695 /* MathStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575514152548AE6500F48695 /* MathStuff.swift */; };
+		5755145E2548B25300F48695 /* triviaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755145D2548B25300F48695 /* triviaTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		575514602548B25300F48695 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5755138925476E7F00F48695 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5755139025476E8000F48695;
+			remoteInfo = trivia;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5755139125476E8000F48695 /* trivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,10 +42,21 @@
 		575513A525476E8400F48695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		575513B12547817000F48695 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		575514022548A3D100F48695 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		575514152548AE6500F48695 /* MathStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathStuff.swift; sourceTree = "<group>"; };
+		5755145B2548B25300F48695 /* triviaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = triviaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5755145D2548B25300F48695 /* triviaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = triviaTests.swift; sourceTree = "<group>"; };
+		5755145F2548B25300F48695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5755138E25476E8000F48695 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		575514582548B25300F48695 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				5755139325476E8000F48695 /* trivia */,
+				5755145C2548B25300F48695 /* triviaTests */,
 				5755139225476E8000F48695 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				5755139125476E8000F48695 /* trivia.app */,
+				5755145B2548B25300F48695 /* triviaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +90,7 @@
 			children = (
 				575513B02547813C00F48695 /* Model */,
 				5755139425476E8000F48695 /* AppDelegate.swift */,
+				575514152548AE6500F48695 /* MathStuff.swift */,
 				5755139625476E8000F48695 /* SceneDelegate.swift */,
 				5755139825476E8000F48695 /* ViewController.swift */,
 				5755139A25476E8000F48695 /* Main.storyboard */,
@@ -83,6 +109,15 @@
 				575514022548A3D100F48695 /* Questions.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5755145C2548B25300F48695 /* triviaTests */ = {
+			isa = PBXGroup;
+			children = (
+				5755145D2548B25300F48695 /* triviaTests.swift */,
+				5755145F2548B25300F48695 /* Info.plist */,
+			);
+			path = triviaTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +140,24 @@
 			productReference = 5755139125476E8000F48695 /* trivia.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5755145A2548B25300F48695 /* triviaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 575514622548B25300F48695 /* Build configuration list for PBXNativeTarget "triviaTests" */;
+			buildPhases = (
+				575514572548B25300F48695 /* Sources */,
+				575514582548B25300F48695 /* Frameworks */,
+				575514592548B25300F48695 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				575514612548B25300F48695 /* PBXTargetDependency */,
+			);
+			name = triviaTests;
+			productName = triviaTests;
+			productReference = 5755145B2548B25300F48695 /* triviaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -117,6 +170,10 @@
 				TargetAttributes = {
 					5755139025476E8000F48695 = {
 						CreatedOnToolsVersion = 11.7;
+					};
+					5755145A2548B25300F48695 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 5755139025476E8000F48695;
 					};
 				};
 			};
@@ -134,6 +191,7 @@
 			projectRoot = "";
 			targets = (
 				5755139025476E8000F48695 /* trivia */,
+				5755145A2548B25300F48695 /* triviaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -149,6 +207,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		575514592548B25300F48695 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -159,13 +224,30 @@
 				5755139925476E8000F48695 /* ViewController.swift in Sources */,
 				5755139525476E8000F48695 /* AppDelegate.swift in Sources */,
 				5755139F25476E8000F48695 /* trivia.xcdatamodeld in Sources */,
+				575514162548AE6500F48695 /* MathStuff.swift in Sources */,
 				575514032548A3D100F48695 /* Questions.swift in Sources */,
 				5755139725476E8000F48695 /* SceneDelegate.swift in Sources */,
 				575513B22547817000F48695 /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		575514572548B25300F48695 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5755145E2548B25300F48695 /* triviaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		575514612548B25300F48695 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5755139025476E8000F48695 /* trivia */;
+			targetProxy = 575514602548B25300F48695 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5755139A25476E8000F48695 /* Main.storyboard */ = {
@@ -337,6 +419,46 @@
 			};
 			name = Release;
 		};
+		575514632548B25300F48695 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 552FE6SCDL;
+				INFOPLIST_FILE = triviaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.joshuabseitz.triviaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/trivia.app/trivia";
+			};
+			name = Debug;
+		};
+		575514642548B25300F48695 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 552FE6SCDL;
+				INFOPLIST_FILE = triviaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.joshuabseitz.triviaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/trivia.app/trivia";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -354,6 +476,15 @@
 			buildConfigurations = (
 				575513A925476E8400F48695 /* Debug */,
 				575513AA25476E8400F48695 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		575514622548B25300F48695 /* Build configuration list for PBXNativeTarget "triviaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				575514632548B25300F48695 /* Debug */,
+				575514642548B25300F48695 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
