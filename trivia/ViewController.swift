@@ -23,14 +23,16 @@ class ViewController: UIViewController {
 		URLSession.shared.dataTask(with: url) {(data, response, error) in
 			
 			do {
-				let questions = try JSONDecoder().decode([Questions].self, from: data!) // do not forcefully unwarp irl unless
-				for question in questions {
-					print("Question: \(question.question), Incorrect: \(question.incorrect), Correct: \(question.correct)")
-				}
+				let questions = try JSONDecoder().decode([Questions].self, from: data!) // force unwrap is bad practice
+				self.updateQuestions(questions)
 			} catch {
 				print("There was an error finding the data!")
 			}
 			
 		}.resume()
+	}
+	
+	func updateQuestions(_ questions: [Questions]) {
+		print(questions)
 	}
 }
