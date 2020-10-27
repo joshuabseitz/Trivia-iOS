@@ -15,7 +15,6 @@
 		575513A125476E8400F48695 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575513A025476E8400F48695 /* Assets.xcassets */; };
 		575513A425476E8400F48695 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 575513A225476E8400F48695 /* LaunchScreen.storyboard */; };
 		575513B22547817000F48695 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575513B12547817000F48695 /* PersistenceController.swift */; };
-		575513B425478A5A00F48695 /* questionBank.json in Resources */ = {isa = PBXBuildFile; fileRef = 575513B325478A5A00F48695 /* questionBank.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		575513A325476E8400F48695 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		575513A525476E8400F48695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		575513B12547817000F48695 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
-		575513B325478A5A00F48695 /* questionBank.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = questionBank.json; path = ../../../../Downloads/Tandem_Apprentice_Challenge_2020/questionBank.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +76,6 @@
 		575513B02547813C00F48695 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				575513B325478A5A00F48695 /* questionBank.json */,
 				5755139D25476E8000F48695 /* trivia.xcdatamodeld */,
 				575513B12547817000F48695 /* PersistenceController.swift */,
 			);
@@ -143,7 +140,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				575513B425478A5A00F48695 /* questionBank.json in Resources */,
 				575513A425476E8400F48695 /* LaunchScreen.storyboard in Resources */,
 				575513A125476E8400F48695 /* Assets.xcassets in Resources */,
 				5755139C25476E8000F48695 /* Main.storyboard in Resources */,

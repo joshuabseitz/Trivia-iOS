@@ -14,26 +14,31 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		
 		super.viewDidLoad()
-			
-		//JSON Setup
-		let JSON = """
-		{
-			"question": "In Shakespeare's play Julius Caesar, Caesar's last words were...",
-			"incorrect": ["Iacta alea est!", "Vidi, vini, vici", "Aegri somnia vana"],
-			"correct": "Et tu, Brute?"
-		}
-		"""
-
-		let jsonData = JSON.data(using: .utf8)!
-		let question: Question = try! JSONDecoder().decode(Question.self, from: jsonData)
-
-		print(question.question) // Prints: "Optionals in Swift explained: 5 things you should know"
+		getData()
 		
+	}
+	
+	fileprivate func getData() {
+		let url = URL(string: "https://jsonkeeper.com/b/CVHP")!
+		URLSession.shared.dataTask(with: url) {(data, response, error) in
+			
+			do {
+				let questions = try JSONDecoder().decode([Questions].self, from: data!) // do not forcefully unwarp irl unless
+				for question in questions {
+					print("Question: \(question.question), Incorrect: \(question.incorrect), Correct: \(question.correct)")
+				}
+			} catch {
+				print("There was an error finding the data!")
+			}
+			
+		}.resume()
 	}
 }
 
-struct Question: Decodable {
-    let question: String
+struct Questions: Decodable
+{
+	let question: String
 	let incorrect: [String]
 	let correct: String
 }
+
