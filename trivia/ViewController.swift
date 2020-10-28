@@ -27,6 +27,7 @@ class ViewController: UIViewController {
 	var questionBank = [Questions]()
 	var currentQuestion = Questions(question: "Default", incorrect: ["Default"], correct: "Default")
 	var points = 0
+	var questionCount: Int = 0
 	
 //	MARK: - View Lifecycles
 	
@@ -107,20 +108,38 @@ class ViewController: UIViewController {
 		// Put buttons into array
 		let buttons: [ChoiceButton] = [choice1, choice2, choice3, choice4,]
 		
-		// Hide all buttons
+		if questionCount < 10 {
+			
+			hideButtons()
+			
+			// Refresh Question
+			refreshQuestion(buttons: buttons, questionView: question)
+			
+			// Hide Next question Button
+			nextButton.isHidden = true
+			
+			// Enable all buttons
+			enableButtons()
+			
+			// Increments question count to track how many questions the user has gotten
+			questionCount += 1
+			print("questioncount: \(questionCount)")
+		
+		} else {
+			
+			hideButtons()
+			question.text = "Game over – you scored \(points) points."
+			question.center()
+			question.centerVertically()
+			
+		}
+	}
+	
+	func hideButtons() {
+		let buttons: [ChoiceButton] = [choice1, choice2, choice3, choice4,]
 		for button in buttons {
 			button.isHidden = true
 		}
-		
-		// Refresh Question
-		refreshQuestion(buttons: buttons, questionView: question)
-		
-		// Hide Next question Button
-		nextButton.isHidden = true
-		
-		// Enable all buttons
-		enableButtons()
-		
 	}
 	
 	func updateScore(_ pts: Int?) {

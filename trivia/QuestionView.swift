@@ -32,4 +32,8 @@ class QuestionView: UITextView {
         let positiveTopOffset = max(1, topOffset)
         contentOffset.y = -positiveTopOffset
     }
+	
+	func center() {
+		frame = CGRect(x: 31, y: 295, width: 352, height: 307)
+	}
 }
