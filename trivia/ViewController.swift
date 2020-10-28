@@ -12,10 +12,12 @@ class ViewController: UIViewController {
 
 //	MARK: - IBOutlets
 	@IBOutlet weak var question: QuestionView!
+	
 	@IBOutlet weak var choice1: ChoiceButton!
 	@IBOutlet weak var choice2: ChoiceButton!
 	@IBOutlet weak var choice3: ChoiceButton!
 	@IBOutlet weak var choice4: ChoiceButton!
+	
 	@IBOutlet weak var nextButton: ScoreLabel!
 	
 //	MARK: - Properties
@@ -32,61 +34,88 @@ class ViewController: UIViewController {
 		let data = readLocalFile(forName: "data")
 		let questions = try! JSONDecoder().decode([Questions].self, from: data!)
 		questionBank = questions
+
+		// Set Title
+		self.title = "Trivia"
 		
-		// Put choicebuttons in array
-		let buttons: [ChoiceButton] = [choice1, choice2, choice3, choice4,]
-		for button in buttons {
-			button.isHidden = true
-		}
-		
-		// Refresh Question
-		refreshQuestion(buttons: buttons, questionView: question)
+		setup()
+
 	}
 	
 //	MARK: - IB Actions
 	
 	@IBAction func didTapB1(_ sender: ChoiceButton) {
+		disableButtons()
 		tappedAnswer(sender)
 	}
 	
 	@IBAction func didTapB2(_ sender: ChoiceButton) {
+		disableButtons()
 		tappedAnswer(sender)
 	}
 	
 	@IBAction func didTapB3(_ sender: ChoiceButton) {
+		disableButtons()
 		tappedAnswer(sender)
 	}
 	
 	@IBAction func didTapB4(_ sender: ChoiceButton) {
+		disableButtons()
 		tappedAnswer(sender)
 	}
 	
 	@IBAction func didTapNextQuestion(_ sender: UIButton) {
-		nextQuestion()
+		
+		// Put buttons into array
+		let buttons: [ChoiceButton] = [choice1, choice2, choice3, choice4,]
+		
+		// Resets button styling for button that was revealed
+		buttons[indexOfCorrectAnswer(question: currentQuestion)!].reset()
+		
+		setup()
 	}
 	
 	
 // 	MARK: - Trivia Logic
 	
-	/**
-	Grabs a new, random question and refreshes buttons + question text
-	- Parameter buttons: Recieves an array of buttons that appear on the view
-	- Parameter questionView: Recieves the QuestionView, where the question text will appear
-	*/
-	
-	func nextQuestion() {
+	func disableButtons() {
 		
-		// Put choicebuttons in array
 		let buttons: [ChoiceButton] = [choice1, choice2, choice3, choice4,]
+		
+		for button in buttons {
+			button.isEnabled = false
+		}
+		
+	}
+	
+	func enableButtons() {
+		
+		let buttons: [ChoiceButton] = [choice1, choice2, choice3, choice4,]
+		
+		for button in buttons {
+			button.isEnabled = true
+		}
+		
+	}
+	
+	func setup() {
+		
+		// Put buttons into array
+		let buttons: [ChoiceButton] = [choice1, choice2, choice3, choice4,]
+		
+		// Hide all buttons
 		for button in buttons {
 			button.isHidden = true
 		}
 		
-		// Resets button styling for button that was revealed
-		buttons[indexOfCorrectAnswer(question: currentQuestion)!].reset()
-		
 		// Refresh Question
 		refreshQuestion(buttons: buttons, questionView: question)
+		
+		// Hide Next question Button
+		nextButton.isHidden = true
+		
+		// Enable all buttons
+		enableButtons()
 		
 	}
 	
@@ -110,11 +139,6 @@ class ViewController: UIViewController {
 
 	}
 	
-	/**
-	Recieves a question that needs to be deleted and deletes it
-	- Parameter questionToDelete: Question object that needs to be deleted
-	*/
-	
 	func deleteQuestion(questionToDelete: Questions) {
 		
 		if let index = questionBank.firstIndex(of: questionToDelete) {
@@ -123,11 +147,6 @@ class ViewController: UIViewController {
 		}
 		
 	}
-	
-	/**
-	Recieves a button that has been tapped by a user and checks to see if the button is the correct choice. If so, it calls a method to reveal the answer.
-	- Parameter buttonPressed: The button (sender) that was pressed.
-	*/
 	
 	func tappedAnswer(_ buttonPressed: ChoiceButton) {
 		let buttonTitle = String(buttonPressed.title(for: .normal)!)
