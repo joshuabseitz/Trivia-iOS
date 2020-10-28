@@ -16,31 +16,33 @@ class ViewController: UIViewController {
 	@IBOutlet weak var choice2: ChoiceButton!
 	@IBOutlet weak var choice3: ChoiceButton!
 	@IBOutlet weak var choice4: ChoiceButton!
-	@IBOutlet weak var nextButton: UIButton!
+	@IBOutlet weak var nextButton: ScoreLabel!
 	
-// MARK: - Global Variable
-	var questionBank: [Questions] = []
+//	MARK: - Properties
+	var questionBank = [Questions]()
+	
+//	MARK: - View Lifecycles
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-//		print(getData(url: "https://jsonkeeper.com/b/CVHP"))
+		getData(url: "https://jsonkeeper.com/b/CVHP")
+		nextButton.isHidden = true
 	}
 	
 	
 //	MARK: - JSON Functions
 	
 	fileprivate func getData(url: String) {
-		
+
 		let url = URL(string: url)
 		URLSession.shared.dataTask(with: url!) {(data, response, error) in
-			
-			do {
-				let questions = try JSONDecoder().decode([Questions].self, from: data!) // force unwrap is bad practice
-			} catch {
-				self.jsonNotFound()
-			}
-			
+			let questions = try! JSONDecoder().decode([Questions].self, from: data!)
+			self.saveQuestions(questions)
 		}.resume()
+	}
+	
+	func saveQuestions(_ questions: [Questions]) {
+		questionBank = questions
 	}
 	
 	func jsonNotFound() {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57507F102549CB820037FF48 /* ScoreLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57507F0F2549CB820037FF48 /* ScoreLabel.swift */; };
 		5755139525476E8000F48695 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755139425476E8000F48695 /* AppDelegate.swift */; };
 		5755139725476E8000F48695 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755139625476E8000F48695 /* SceneDelegate.swift */; };
 		5755139925476E8000F48695 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755139825476E8000F48695 /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57507F0F2549CB820037FF48 /* ScoreLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreLabel.swift; sourceTree = "<group>"; };
 		5755139125476E8000F48695 /* trivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5755139425476E8000F48695 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5755139625476E8000F48695 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				575513A525476E8400F48695 /* Info.plist */,
 				57C54E4B2549BAB800B8EF60 /* QuestionView.swift */,
 				57C54E492548CFA500B8EF60 /* ChoiceButton.swift */,
+				57507F0F2549CB820037FF48 /* ScoreLabel.swift */,
 			);
 			path = trivia;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				575514032548A3D100F48695 /* Questions.swift in Sources */,
 				5755139725476E8000F48695 /* SceneDelegate.swift in Sources */,
 				575513B22547817000F48695 /* PersistenceController.swift in Sources */,
+				57507F102549CB820037FF48 /* ScoreLabel.swift in Sources */,
 				57C54E4A2548CFA500B8EF60 /* ChoiceButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

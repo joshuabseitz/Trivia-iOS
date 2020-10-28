@@ -17,13 +17,13 @@ class ChoiceButton: UIButton {
 	
 	required init?(coder: NSCoder) {
 		super.init(coder:coder)
-		setConfig()
+		setup()
 	}
 	
-	func setConfig() {
-		
-//		layer.borderWidth = CGFloat(1.0)
-//		layer.cornerRadius = CGFloat(5.0)
+	func setup() {
+		layer.borderColor = UIColor.white.cgColor
+		layer.borderWidth = CGFloat(1.0)
+		layer.cornerRadius = CGFloat(20.0)
 		titleEdgeInsets = UIEdgeInsets(top: 15,left: 15,bottom: 15,right: 15)
 	}
 	

@@ -13,15 +13,15 @@ class QuestionView: UITextView {
 	
 	override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
-        setConfig()
+        setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setConfig()
+        setup()
     }
 	
-	func setConfig() {
+	func setup() {
 		centerVertically()
 	}
 	
