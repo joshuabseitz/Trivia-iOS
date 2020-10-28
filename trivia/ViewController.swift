@@ -136,6 +136,7 @@ class ViewController: UIViewController {
 		choices.shuffle()
 		
 		question.text = currentQuestion.question
+		question.centerVertically()
 		
 		var count = 0
 		for choice in choices {
