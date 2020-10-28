@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="What is the top speed an average cat can travel?" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpl-fH-rfa" customClass="QuestionView" customModule="trivia" customModuleProvider="target">
-                                <rect key="frame" x="31" y="124" width="352" height="342"/>
+                                <rect key="frame" x="31" y="159" width="352" height="307"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.76078431372549016" green="0.6588235294117647" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
@@ -79,6 +79,14 @@
                                     <action selector="didTapB4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oAY-sD-Kic"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V51-N2-COn" customClass="ScoreLabel" customModule="trivia" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="109" width="166" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.76078431369999999" green="0.6588235294" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.14117647059999999" green="0.24313725489999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -91,6 +99,7 @@
                         <outlet property="choice4" destination="47D-UV-hnq" id="LT1-96-bEg"/>
                         <outlet property="nextButton" destination="9O0-J8-6xk" id="5uE-mt-jaH"/>
                         <outlet property="question" destination="kpl-fH-rfa" id="6fe-mv-h7q"/>
+                        <outlet property="scoreLabel" destination="V51-N2-COn" id="5bU-D0-tvP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

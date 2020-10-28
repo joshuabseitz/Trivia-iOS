@@ -20,6 +20,9 @@ class ViewController: UIViewController {
 	
 	@IBOutlet weak var nextButton: ScoreLabel!
 	
+	@IBOutlet weak var scoreLabel: ScoreLabel!
+	
+	
 //	MARK: - Properties
 	var questionBank = [Questions]()
 	var currentQuestion = Questions(question: "Default", incorrect: ["Default"], correct: "Default")
@@ -117,6 +120,9 @@ class ViewController: UIViewController {
 		
 		// Enable all buttons
 		enableButtons()
+		
+		// Set score
+		scoreLabel.text = "\(points)pts"
 		
 	}
 	
