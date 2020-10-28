@@ -34,29 +34,30 @@ class ViewController: UIViewController {
 		let data = readLocalFile(forName: "data")
 		
 		let questions = try! JSONDecoder().decode([Questions].self, from: data!)
+		questionBank = questions
 		
-		print(questions)
+		refreshQuestion()
 	}
 	
 // 	MARK: - Trivia Logic
 	
-//	func refreshQuestion() {
-//		let randomQuestion = questionBank.randomElement()
-//		let question = randomQuestion?.question
-//		let correct = randomQuestion?.correct
-//
-//		var choices = randomQuestion?.incorrect
-//		choices!.append(correct!)
-//		choices!.shuffle()
-//
-//		let buttons: [ChoiceButton] = [choice1, choice2, choice3, choice4,]
-//
-//		var count = 0
-//		for button in buttons {
-//			button.titleLabel!.text = choices![count]
-//			count += 1
-//		}
-//	}
+	func refreshQuestion() {
+		let randomQuestion = questionBank.randomElement()
+		let question = randomQuestion?.question
+		let correct = randomQuestion?.correct
+
+		var choices = randomQuestion?.incorrect
+		choices!.append(correct!)
+		choices!.shuffle()
+
+		let buttons: [ChoiceButton] = [choice1, choice2, choice3, choice4,]
+
+		var count = 0
+		for button in buttons {
+			button.setTitle(String(choices![count]), for: .normal)
+			count += 1
+		}
+	}
 	
 //	MARK: - JSON Functions
 	
@@ -73,23 +74,5 @@ class ViewController: UIViewController {
 		
 		return nil
 	}
-	
-	//	fileprivate func getData(url: String) {
-	//
-	//		let url = URL(string: url)
-	//		URLSession.shared.dataTask(with: url!) {(data, response, error) in
-	//			let questions = try! JSONDecoder().decode([Questions].self, from: data!)
-	//			self.saveQuestions(questions)
-	//		}.resume()
-	//	}
-	//
-	//	func saveQuestions(_ questions: [Questions]) {
-	//		questionBank = questions
-	//	}
-	//
-	//	func jsonNotFound() {
-	//		print("JSON not found")
-	//	}
-	
 	
 }
