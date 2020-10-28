@@ -18,6 +18,7 @@
 		575514032548A3D100F48695 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575514022548A3D100F48695 /* Questions.swift */; };
 		5755145E2548B25300F48695 /* triviaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755145D2548B25300F48695 /* triviaTests.swift */; };
 		57C54E4A2548CFA500B8EF60 /* ChoiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C54E492548CFA500B8EF60 /* ChoiceButton.swift */; };
+		57C54E4C2549BAB900B8EF60 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C54E4B2549BAB800B8EF60 /* QuestionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		5755145D2548B25300F48695 /* triviaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = triviaTests.swift; sourceTree = "<group>"; };
 		5755145F2548B25300F48695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57C54E492548CFA500B8EF60 /* ChoiceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceButton.swift; sourceTree = "<group>"; };
+		57C54E4B2549BAB800B8EF60 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				575513A025476E8400F48695 /* Assets.xcassets */,
 				575513A225476E8400F48695 /* LaunchScreen.storyboard */,
 				575513A525476E8400F48695 /* Info.plist */,
+				57C54E4B2549BAB800B8EF60 /* QuestionView.swift */,
 				57C54E492548CFA500B8EF60 /* ChoiceButton.swift */,
 			);
 			path = trivia;
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57C54E4C2549BAB900B8EF60 /* QuestionView.swift in Sources */,
 				5755139925476E8000F48695 /* ViewController.swift in Sources */,
 				5755139525476E8000F48695 /* AppDelegate.swift in Sources */,
 				5755139F25476E8000F48695 /* trivia.xcdatamodeld in Sources */,

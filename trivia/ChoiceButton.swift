@@ -22,8 +22,8 @@ class ChoiceButton: UIButton {
 	
 	func setConfig() {
 		
-		layer.borderWidth = CGFloat(1.0)
-		layer.cornerRadius = CGFloat(5.0)
+//		layer.borderWidth = CGFloat(1.0)
+//		layer.cornerRadius = CGFloat(5.0)
 		titleEdgeInsets = UIEdgeInsets(top: 15,left: 15,bottom: 15,right: 15)
 	}
 	
