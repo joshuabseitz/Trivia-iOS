@@ -121,9 +121,11 @@ class ViewController: UIViewController {
 		// Enable all buttons
 		enableButtons()
 		
-		// Set score
+	}
+	
+	func updateScore(_ pts: Int?) {
+		points += pts!
 		scoreLabel.text = "\(points)pts"
-		
 	}
 	
 	func refreshQuestion(buttons: [ChoiceButton], questionView: QuestionView) {
@@ -159,7 +161,7 @@ class ViewController: UIViewController {
 	func tappedAnswer(_ buttonPressed: ChoiceButton) {
 		let buttonTitle = String(buttonPressed.title(for: .normal)!)
 		if currentQuestion.correct.contains(buttonTitle) {
-			points += 10
+			updateScore(10)
 			print("User selected the correct choice. User's points are now: \(points)")
 			revealAnswer()
 			nextButton.isHidden = false
