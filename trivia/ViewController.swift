@@ -20,7 +20,7 @@ class ViewController: UIViewController {
 	
 //	MARK: - Properties
 	var questionBank = [Questions]()
-	var currentQuestion: Questions = Questions(question: "Default", incorrect: ["Default"], correct: "Default")
+	var currentQuestion = Questions(question: "Default", incorrect: ["Default"], correct: "Default")
 	
 //	MARK: - View Lifecycles
 	
@@ -104,16 +104,35 @@ class ViewController: UIViewController {
 		
 	}
 	
+	/**
+	Recieves a button that has been tapped by a user and checks to see if the button is the correct choice. If so, it calls a method to reveal the answer.
+	- Parameter buttonPressed: The button (sender) that was pressed.
+	*/
+	
 	func tappedAnswer(_ buttonPressed: ChoiceButton) {
 		let buttonTitle = String(buttonPressed.title(for: .normal)!)
-		print(buttonTitle)
-		let correct = String(currentQuestion.correct)
-		print(correct)
-		
-		if correct.contains(buttonTitle) {
-			print("Correct")
+		if currentQuestion.correct.contains(buttonTitle) {
+			print("User selected the correct choice.")
+			revealAnswer()
+			nextButton.isHidden = false
 		} else {
-			print("Incorrect")
+			print("User selected incorrect choice.")
+			revealAnswer()
+			nextButton.isHidden = false
+		}
+	}
+	
+	func revealAnswer() {
+		let buttons = [choice1, choice2, choice3, choice4]
+		buttons[indexOfCorrectAnswer(question: currentQuestion)!]!.reveal()
+	}
+	
+	func indexOfCorrectAnswer(question: Questions) -> Int? {
+		let buttons = [choice1.title(for: .normal), choice2.title(for: .normal), choice3.title(for: .normal), choice4.title(for: .normal)]
+		if let index = buttons.firstIndex(of: question.correct) {
+			return index
+		} else {
+			return nil
 		}
 	}
 	

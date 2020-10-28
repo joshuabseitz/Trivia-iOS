@@ -27,4 +27,8 @@ class ChoiceButton: UIButton {
 		titleEdgeInsets = UIEdgeInsets(top: 15,left: 15,bottom: 15,right: 15)
 	}
 	
+	func reveal() {
+		layer.borderColor = UIColor.green.cgColor
+	}
+	
 }
