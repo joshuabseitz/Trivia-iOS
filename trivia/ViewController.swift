@@ -36,27 +36,37 @@ class ViewController: UIViewController {
 		let questions = try! JSONDecoder().decode([Questions].self, from: data!)
 		questionBank = questions
 		
-		refreshQuestion()
+		let buttons: [ChoiceButton] = [choice1, choice2, choice3, choice4,]
+		for button in buttons {
+			button.isHidden = true
+		}
+		
+		refreshQuestion(buttons: buttons, questionView: question)
 	}
 	
 // 	MARK: - Trivia Logic
 	
-	func refreshQuestion() {
+	func refreshQuestion(buttons: [ChoiceButton], questionView: QuestionView) {
+		
+		// Getting a randomquestion
 		let randomQuestion = questionBank.randomElement()
-		let question = randomQuestion?.question
-		let correct = randomQuestion?.correct
-
+		
+		// Putting choices together and shuffling
 		var choices = randomQuestion?.incorrect
-		choices!.append(correct!)
+		choices!.append(randomQuestion!.correct)
 		choices!.shuffle()
-
-		let buttons: [ChoiceButton] = [choice1, choice2, choice3, choice4,]
-
+		
+		// Setting QuestionView text to the randomquestion
+		question.text = randomQuestion?.question
+		
+		// Setting ChoiceButton titles to choices
 		var count = 0
-		for button in buttons {
-			button.setTitle(String(choices![count]), for: .normal)
-			count += 1
+		for choice in choices! {
+			buttons[count].setTitle(String(choice), for: .normal)
+			buttons[count].isHidden = false
+			count+=1
 		}
+
 	}
 	
 //	MARK: - JSON Functions
