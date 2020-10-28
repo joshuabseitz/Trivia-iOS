@@ -23,6 +23,7 @@ class ViewController: UIViewController {
 //	MARK: - Properties
 	var questionBank = [Questions]()
 	var currentQuestion = Questions(question: "Default", incorrect: ["Default"], correct: "Default")
+	var points = 0
 	
 //	MARK: - View Lifecycles
 	
@@ -151,7 +152,8 @@ class ViewController: UIViewController {
 	func tappedAnswer(_ buttonPressed: ChoiceButton) {
 		let buttonTitle = String(buttonPressed.title(for: .normal)!)
 		if currentQuestion.correct.contains(buttonTitle) {
-			print("User selected the correct choice.")
+			points += 10
+			print("User selected the correct choice. User's points are now: \(points)")
 			revealAnswer()
 			nextButton.isHidden = false
 		} else {
