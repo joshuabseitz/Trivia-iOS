@@ -61,6 +61,10 @@ class ViewController: UIViewController {
 		tappedAnswer(sender)
 	}
 	
+	@IBAction func didTapNextQuestion(_ sender: UIButton) {
+		nextQuestion()
+	}
+	
 	
 // 	MARK: - Trivia Logic
 	
@@ -69,6 +73,22 @@ class ViewController: UIViewController {
 	- Parameter buttons: Recieves an array of buttons that appear on the view
 	- Parameter questionView: Recieves the QuestionView, where the question text will appear
 	*/
+	
+	func nextQuestion() {
+		
+		// Put choicebuttons in array
+		let buttons: [ChoiceButton] = [choice1, choice2, choice3, choice4,]
+		for button in buttons {
+			button.isHidden = true
+		}
+		
+		// Resets button styling for button that was revealed
+		buttons[indexOfCorrectAnswer(question: currentQuestion)!].reset()
+		
+		// Refresh Question
+		refreshQuestion(buttons: buttons, questionView: question)
+		
+	}
 	
 	func refreshQuestion(buttons: [ChoiceButton], questionView: QuestionView) {
 		
