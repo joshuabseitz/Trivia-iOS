@@ -20,13 +20,9 @@ class ViewController: UIViewController {
 	
 //	MARK: - Properties
 	var questionBank = [Questions]()
+	var currentQuestion: Questions = Questions(question: "Default", incorrect: ["Default"], correct: "Default")
 	
 //	MARK: - View Lifecycles
-
-//	override func viewWillAppear(_ animated: Bool) {
-//		super.viewWillAppear(animated) // No need for semicolon
-//		getData(url: "https://jsonkeeper.com/b/CVHP")
-//	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -47,6 +43,25 @@ class ViewController: UIViewController {
 		refreshQuestion(buttons: buttons, questionView: question)
 	}
 	
+//	MARK: - IB Actions
+	
+	@IBAction func didTapB1(_ sender: ChoiceButton) {
+		tappedAnswer(sender)
+	}
+	
+	@IBAction func didTapB2(_ sender: ChoiceButton) {
+		tappedAnswer(sender)
+	}
+	
+	@IBAction func didTapB3(_ sender: ChoiceButton) {
+		tappedAnswer(sender)
+	}
+	
+	@IBAction func didTapB4(_ sender: ChoiceButton) {
+		tappedAnswer(sender)
+	}
+	
+	
 // 	MARK: - Trivia Logic
 	
 	/**
@@ -57,23 +72,28 @@ class ViewController: UIViewController {
 	
 	func refreshQuestion(buttons: [ChoiceButton], questionView: QuestionView) {
 		
-		let randomQuestion = questionBank.randomElement()
-		deleteQuestion(questionToDelete: randomQuestion!)
+		currentQuestion = questionBank.randomElement()!
+		deleteQuestion(questionToDelete: currentQuestion)
 		
-		var choices = randomQuestion?.incorrect
-		choices!.append(randomQuestion!.correct)
-		choices!.shuffle()
+		var choices = currentQuestion.incorrect
+		choices.append(currentQuestion.correct)
+		choices.shuffle()
 		
-		question.text = randomQuestion?.question
+		question.text = currentQuestion.question
 		
 		var count = 0
-		for choice in choices! {
+		for choice in choices {
 			buttons[count].setTitle(String(choice), for: .normal)
 			buttons[count].isHidden = false
 			count+=1
 		}
 
 	}
+	
+	/**
+	Recieves a question that needs to be deleted and deletes it
+	- Parameter questionToDelete: Question object that needs to be deleted
+	*/
 	
 	func deleteQuestion(questionToDelete: Questions) {
 		
@@ -82,6 +102,19 @@ class ViewController: UIViewController {
 			print("Question deleted")
 		}
 		
+	}
+	
+	func tappedAnswer(_ buttonPressed: ChoiceButton) {
+		let buttonTitle = String(buttonPressed.title(for: .normal)!)
+		print(buttonTitle)
+		let correct = String(currentQuestion.correct)
+		print(correct)
+		
+		if correct.contains(buttonTitle) {
+			print("Correct")
+		} else {
+			print("Incorrect")
+		}
 	}
 	
 //	MARK: - JSON Functions

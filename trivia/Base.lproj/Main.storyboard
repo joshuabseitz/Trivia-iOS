@@ -38,6 +38,9 @@
                                 <state key="normal" title="42 mph">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapB1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Alo-cu-5fS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WFy-jn-0kc" customClass="ChoiceButton" customModule="trivia" customModuleProvider="target">
                                 <rect key="frame" x="31" y="561" width="352" height="70"/>
@@ -46,14 +49,9 @@
                                 <state key="normal" title="13 mph">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="aov-2g-VBo" customClass="ChoiceButton" customModule="trivia" customModuleProvider="target">
-                                <rect key="frame" x="31" y="639" width="352" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <state key="normal" title="9 mph">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <connections>
+                                    <action selector="didTapB2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ThN-5m-tSi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="47D-UV-hnq" customClass="ChoiceButton" customModule="trivia" customModuleProvider="target">
                                 <rect key="frame" x="31" y="717" width="352" height="70"/>
@@ -62,6 +60,21 @@
                                 <state key="normal" title="31 mph">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapB4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pZr-9b-kUq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="H8R-TM-JMW" customClass="ChoiceButton" customModule="trivia" customModuleProvider="target">
+                                <rect key="frame" x="31" y="639" width="352" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="31 mph">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapB3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RYW-oA-sTG"/>
+                                    <action selector="didTapB4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oAY-sD-Kic"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.14117647059999999" green="0.24313725489999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -71,7 +84,7 @@
                     <connections>
                         <outlet property="choice1" destination="UBH-xC-wZy" id="bxA-8t-6PW"/>
                         <outlet property="choice2" destination="WFy-jn-0kc" id="SaZ-Fd-axb"/>
-                        <outlet property="choice3" destination="aov-2g-VBo" id="9bT-2t-b8e"/>
+                        <outlet property="choice3" destination="H8R-TM-JMW" id="DR6-OW-Cc6"/>
                         <outlet property="choice4" destination="47D-UV-hnq" id="LT1-96-bEg"/>
                         <outlet property="nextButton" destination="9O0-J8-6xk" id="5uE-mt-jaH"/>
                         <outlet property="question" destination="kpl-fH-rfa" id="6fe-mv-h7q"/>
