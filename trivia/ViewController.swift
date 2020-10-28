@@ -31,35 +31,41 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		nextButton.isHidden = true
-		let data = readLocalFile(forName: "data")
 		
+		// Read JSON
+		let data = readLocalFile(forName: "data")
 		let questions = try! JSONDecoder().decode([Questions].self, from: data!)
 		questionBank = questions
 		
+		// Put choicebuttons in array
 		let buttons: [ChoiceButton] = [choice1, choice2, choice3, choice4,]
 		for button in buttons {
 			button.isHidden = true
 		}
 		
+		// Refresh Question
 		refreshQuestion(buttons: buttons, questionView: question)
 	}
 	
 // 	MARK: - Trivia Logic
 	
+	/**
+	Grabs a new, random question and refreshes buttons + question text
+	- Parameter buttons: Recieves an array of buttons that appear on the view
+	- Parameter questionView: Recieves the QuestionView, where the question text will appear
+	*/
+	
 	func refreshQuestion(buttons: [ChoiceButton], questionView: QuestionView) {
 		
-		// Getting a randomquestion
 		let randomQuestion = questionBank.randomElement()
+		deleteQuestion(questionToDelete: randomQuestion!)
 		
-		// Putting choices together and shuffling
 		var choices = randomQuestion?.incorrect
 		choices!.append(randomQuestion!.correct)
 		choices!.shuffle()
 		
-		// Setting QuestionView text to the randomquestion
 		question.text = randomQuestion?.question
 		
-		// Setting ChoiceButton titles to choices
 		var count = 0
 		for choice in choices! {
 			buttons[count].setTitle(String(choice), for: .normal)
@@ -67,6 +73,15 @@ class ViewController: UIViewController {
 			count+=1
 		}
 
+	}
+	
+	func deleteQuestion(questionToDelete: Questions) {
+		
+		if let index = questionBank.firstIndex(of: questionToDelete) {
+			questionBank.remove(at: index)
+			print("Question deleted")
+		}
+		
 	}
 	
 //	MARK: - JSON Functions

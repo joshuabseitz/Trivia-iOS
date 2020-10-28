@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Questions: Decodable {
+struct Questions: Decodable, Equatable {
 	
 	init(question: String, incorrect: [String], correct: String){
 		self.question = question
