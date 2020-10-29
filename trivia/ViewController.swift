@@ -48,19 +48,7 @@ class ViewController: UIViewController {
 	}
 	
 //	MARK: - IB Actions
-	@IBAction func didTapB1(_ sender: ChoiceButton) {
-		tappedAnswer(sender)
-	}
-	
-	@IBAction func didTapB2(_ sender: ChoiceButton) {
-		tappedAnswer(sender)
-	}
-	
-	@IBAction func didTapB3(_ sender: ChoiceButton) {
-		tappedAnswer(sender)
-	}
-	
-	@IBAction func didTapB4(_ sender: ChoiceButton) {
+	@IBAction func didSelectChoice(_ sender: ChoiceButton) {
 		tappedAnswer(sender)
 	}
 	

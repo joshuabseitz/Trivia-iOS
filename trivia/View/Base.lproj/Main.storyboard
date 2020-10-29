@@ -42,7 +42,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTapB1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Alo-cu-5fS"/>
+                                    <action selector="didSelectChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V0G-Sg-tlO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WFy-jn-0kc" customClass="ChoiceButton" customModule="trivia" customModuleProvider="target">
@@ -53,7 +53,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTapB2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ThN-5m-tSi"/>
+                                    <action selector="didSelectChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iqv-7b-LYe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="47D-UV-hnq" customClass="ChoiceButton" customModule="trivia" customModuleProvider="target">
@@ -64,7 +64,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTapB4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pZr-9b-kUq"/>
+                                    <action selector="didSelectChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="35J-FC-vgo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="H8R-TM-JMW" customClass="ChoiceButton" customModule="trivia" customModuleProvider="target">
@@ -75,8 +75,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTapB3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RYW-oA-sTG"/>
-                                    <action selector="didTapB4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oAY-sD-Kic"/>
+                                    <action selector="didSelectChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TXk-uh-tUc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V51-N2-COn" customClass="ScoreLabel" customModule="trivia" customModuleProvider="target">

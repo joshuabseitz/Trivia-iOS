@@ -74,41 +74,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		57507F55254B3D420037FF48 /* Views */ = {
+		57507F5B254B470A0037FF48 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5755139D25476E8000F48695 /* trivia.xcdatamodeld */,
+				57507F112549D4010037FF48 /* data.json */,
+				575513B12547817000F48695 /* PersistenceController.swift */,
+				575514022548A3D100F48695 /* Questions.swift */,
+				57C54E4B2549BAB800B8EF60 /* QuestionView.swift */,
+				57C54E492548CFA500B8EF60 /* ChoiceButton.swift */,
+				57507F0F2549CB820037FF48 /* ScoreLabel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		57507F5C254B47260037FF48 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				5755139A25476E8000F48695 /* Main.storyboard */,
 				575513A225476E8400F48695 /* LaunchScreen.storyboard */,
 			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		57507F56254B3D480037FF48 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				5755139825476E8000F48695 /* ViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		57507F57254B3DB90037FF48 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				57C54E4B2549BAB800B8EF60 /* QuestionView.swift */,
-				57C54E492548CFA500B8EF60 /* ChoiceButton.swift */,
-				57507F0F2549CB820037FF48 /* ScoreLabel.swift */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		57507F58254B3E4E0037FF48 /* SupportFiles */ = {
-			isa = PBXGroup;
-			children = (
-				5755139425476E8000F48695 /* AppDelegate.swift */,
-				5755139625476E8000F48695 /* SceneDelegate.swift */,
-				575513A025476E8400F48695 /* Assets.xcassets */,
-			);
-			path = SupportFiles;
+			path = View;
 			sourceTree = "<group>";
 		};
 		5755138825476E7F00F48695 = {
@@ -135,24 +121,14 @@
 			isa = PBXGroup;
 			children = (
 				575513A525476E8400F48695 /* Info.plist */,
-				57507F55254B3D420037FF48 /* Views */,
-				57507F56254B3D480037FF48 /* Controllers */,
-				575513B02547813C00F48695 /* Models */,
-				57507F58254B3E4E0037FF48 /* SupportFiles */,
+				5755139825476E8000F48695 /* ViewController.swift */,
+				57507F5C254B47260037FF48 /* View */,
+				57507F5B254B470A0037FF48 /* Models */,
+				575513A025476E8400F48695 /* Assets.xcassets */,
+				5755139425476E8000F48695 /* AppDelegate.swift */,
+				5755139625476E8000F48695 /* SceneDelegate.swift */,
 			);
 			path = trivia;
-			sourceTree = "<group>";
-		};
-		575513B02547813C00F48695 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				5755139D25476E8000F48695 /* trivia.xcdatamodeld */,
-				57507F112549D4010037FF48 /* data.json */,
-				575514022548A3D100F48695 /* Questions.swift */,
-				575513B12547817000F48695 /* PersistenceController.swift */,
-				57507F57254B3DB90037FF48 /* UI */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		5755145C2548B25300F48695 /* triviaTests */ = {
