@@ -32,5 +32,4 @@ struct PersistenceController {
 		container.viewContext.delete(highscore)
 		try! container.viewContext.save()
 	}
-	
 }

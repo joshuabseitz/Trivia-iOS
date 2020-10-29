@@ -7,18 +7,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="trivia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="QuestionViewController" customModule="trivia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9O0-J8-6xk">
-                                <rect key="frame" x="0.0" y="811" width="414" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9O0-J8-6xk">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
                                 <color key="backgroundColor" red="0.76078431369999999" green="0.6588235294" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QGa-TE-gJk"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Next Question">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -27,77 +29,114 @@
                                     <action selector="didTapNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bT5-iu-obn"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="What is the top speed an average cat can travel?" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpl-fH-rfa" customClass="QuestionView" customModule="trivia" customModuleProvider="target">
-                                <rect key="frame" x="31" y="159" width="352" height="307"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="What is the top speed an average cat can travel?" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpl-fH-rfa" customClass="QuestionView" customModule="trivia" customModuleProvider="target">
+                                <rect key="frame" x="30" y="158" width="354" height="309"/>
                                 <color key="textColor" red="0.76078431372549016" green="0.6588235294117647" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="UBH-xC-wZy" customClass="ChoiceButton" customModule="trivia" customModuleProvider="target">
-                                <rect key="frame" x="31" y="483" width="352" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="UBH-xC-wZy">
+                                <rect key="frame" x="30" y="483" width="354" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="ibs-n9-d5F"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="42 mph">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="didSelectChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V0G-Sg-tlO"/>
+                                    <action selector="didTapChoiceButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V0G-Sg-tlO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WFy-jn-0kc" customClass="ChoiceButton" customModule="trivia" customModuleProvider="target">
-                                <rect key="frame" x="31" y="561" width="352" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WFy-jn-0kc">
+                                <rect key="frame" x="30" y="561" width="354" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="3UY-58-Glm"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="13 mph">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="didSelectChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iqv-7b-LYe"/>
+                                    <action selector="didTapChoiceButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iqv-7b-LYe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="47D-UV-hnq" customClass="ChoiceButton" customModule="trivia" customModuleProvider="target">
-                                <rect key="frame" x="31" y="717" width="352" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="47D-UV-hnq">
+                                <rect key="frame" x="30" y="717" width="354" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="XcC-yK-r8E"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="31 mph">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="didSelectChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="35J-FC-vgo"/>
+                                    <action selector="didTapChoiceButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="35J-FC-vgo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="H8R-TM-JMW" customClass="ChoiceButton" customModule="trivia" customModuleProvider="target">
-                                <rect key="frame" x="31" y="639" width="352" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="H8R-TM-JMW">
+                                <rect key="frame" x="30" y="639" width="354" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Kyp-et-2g2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="31 mph">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="didSelectChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TXk-uh-tUc"/>
+                                    <action selector="didTapChoiceButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TXk-uh-tUc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V51-N2-COn" customClass="ScoreLabel" customModule="trivia" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="109" width="166" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 pts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V51-N2-COn" customClass="ScoreLabel" customModule="trivia" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="108" width="165" height="42"/>
                                 <color key="backgroundColor" red="0.76078431369999999" green="0.6588235294" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="g2A-om-fHf"/>
+                                    <constraint firstAttribute="height" constant="42" id="yEB-pb-7oW"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.14117647059999999" green="0.24313725489999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="UBH-xC-wZy" firstAttribute="top" secondItem="kpl-fH-rfa" secondAttribute="bottom" constant="16" id="07Q-im-7TK"/>
+                            <constraint firstItem="9O0-J8-6xk" firstAttribute="top" secondItem="47D-UV-hnq" secondAttribute="bottom" constant="25" id="1KL-i9-Aw9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kpl-fH-rfa" secondAttribute="trailing" constant="30" id="2kT-jv-hpg"/>
+                            <constraint firstItem="H8R-TM-JMW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="6en-Bv-Gij"/>
+                            <constraint firstItem="kpl-fH-rfa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="G3S-OB-Alw"/>
+                            <constraint firstItem="47D-UV-hnq" firstAttribute="top" secondItem="H8R-TM-JMW" secondAttribute="bottom" constant="8" id="LRb-Bc-nFK"/>
+                            <constraint firstItem="47D-UV-hnq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Lxp-1w-yYF"/>
+                            <constraint firstItem="V51-N2-COn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mjx-yN-d75"/>
+                            <constraint firstItem="UBH-xC-wZy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="PNe-IS-N7W"/>
+                            <constraint firstItem="WFy-jn-0kc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Ppa-m3-uhe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UBH-xC-wZy" secondAttribute="trailing" constant="30" id="RZd-Kl-seB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H8R-TM-JMW" secondAttribute="trailing" constant="30" id="UGf-lr-jyN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="47D-UV-hnq" secondAttribute="trailing" constant="30" id="WBi-0j-yfU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WFy-jn-0kc" secondAttribute="trailing" constant="30" id="Xrd-mI-Zzz"/>
+                            <constraint firstItem="H8R-TM-JMW" firstAttribute="top" secondItem="WFy-jn-0kc" secondAttribute="bottom" constant="8" id="cM1-aI-OYZ"/>
+                            <constraint firstItem="9O0-J8-6xk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ceb-oY-7gS"/>
+                            <constraint firstItem="WFy-jn-0kc" firstAttribute="top" secondItem="UBH-xC-wZy" secondAttribute="bottom" constant="8" id="crl-Me-Mf4"/>
+                            <constraint firstItem="9O0-J8-6xk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="der-VS-lls"/>
+                            <constraint firstItem="V51-N2-COn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="knA-or-UA8"/>
+                            <constraint firstItem="kpl-fH-rfa" firstAttribute="top" secondItem="V51-N2-COn" secondAttribute="bottom" constant="8" id="n6f-uw-4xB"/>
+                            <constraint firstItem="9O0-J8-6xk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qE8-3d-I0x"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="PQi-XE-OOg"/>
                     <connections>
-                        <outlet property="choice1" destination="UBH-xC-wZy" id="bxA-8t-6PW"/>
-                        <outlet property="choice2" destination="WFy-jn-0kc" id="SaZ-Fd-axb"/>
-                        <outlet property="choice3" destination="H8R-TM-JMW" id="DR6-OW-Cc6"/>
-                        <outlet property="choice4" destination="47D-UV-hnq" id="LT1-96-bEg"/>
+                        <outlet property="choiceButton1" destination="UBH-xC-wZy" id="lxe-ko-G8d"/>
+                        <outlet property="choiceButton2" destination="WFy-jn-0kc" id="A3z-xY-VRB"/>
+                        <outlet property="choiceButton3" destination="H8R-TM-JMW" id="qbV-YT-BFP"/>
+                        <outlet property="choiceButton4" destination="47D-UV-hnq" id="MCB-XR-kuv"/>
                         <outlet property="nextButton" destination="9O0-J8-6xk" id="5uE-mt-jaH"/>
-                        <outlet property="question" destination="kpl-fH-rfa" id="6fe-mv-h7q"/>
+                        <outlet property="questionView" destination="kpl-fH-rfa" id="6fe-mv-h7q"/>
                         <outlet property="scoreLabel" destination="V51-N2-COn" id="5bU-D0-tvP"/>
                     </connections>
                 </viewController>
@@ -108,7 +147,7 @@
         <!--Start View Controller-->
         <scene sceneID="wtG-7v-QIM">
             <objects>
-                <viewController id="zXd-Vx-o8P" customClass="StartViewController" sceneMemberID="viewController">
+                <viewController id="zXd-Vx-o8P" customClass="StartViewController" customModule="trivia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AAT-Bq-Egn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -153,7 +192,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="zXd-Vx-o8P" kind="relationship" relationship="rootViewController" id="IAg-nY-3hk"/>
+                        <segue destination="zXd-Vx-o8P" kind="relationship" relationship="rootViewController" id="txd-OV-NYe"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8BZ-Sl-y5j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
