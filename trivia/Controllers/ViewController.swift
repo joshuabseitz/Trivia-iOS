@@ -27,10 +27,9 @@ class ViewController: UIViewController {
 	var questionBank = [Questions]()
 	var currentQuestion = Questions(question: "Default", incorrect: ["Default"], correct: "Default")
 	var points = 0
-	var questionCount: Int = 0
+	var questionCount = 0
 	
 //	MARK: - View Lifecycles
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		nextButton.isHidden = true
@@ -43,33 +42,30 @@ class ViewController: UIViewController {
 		// Set Title
 		self.title = "Trivia"
 		
+		navigationController?.setNavigationBarHidden(true, animated: false)
 		setup()
 
 	}
 	
 //	MARK: - IB Actions
-	
 	@IBAction func didTapB1(_ sender: ChoiceButton) {
-		disableButtons()
 		tappedAnswer(sender)
 	}
 	
 	@IBAction func didTapB2(_ sender: ChoiceButton) {
-		disableButtons()
 		tappedAnswer(sender)
 	}
 	
 	@IBAction func didTapB3(_ sender: ChoiceButton) {
-		disableButtons()
 		tappedAnswer(sender)
 	}
 	
 	@IBAction func didTapB4(_ sender: ChoiceButton) {
-		disableButtons()
 		tappedAnswer(sender)
 	}
 	
 	@IBAction func didTapNextQuestion(_ sender: UIButton) {
+		
 		
 		// Put buttons into array
 		let buttons: [ChoiceButton] = [choice1, choice2, choice3, choice4,]
@@ -82,26 +78,6 @@ class ViewController: UIViewController {
 	
 	
 // 	MARK: - Trivia Logic
-	
-	func disableButtons() {
-		
-		let buttons: [ChoiceButton] = [choice1, choice2, choice3, choice4,]
-		
-		for button in buttons {
-			button.isEnabled = false
-		}
-		
-	}
-	
-	func enableButtons() {
-		
-		let buttons: [ChoiceButton] = [choice1, choice2, choice3, choice4,]
-		
-		for button in buttons {
-			button.isEnabled = true
-		}
-		
-	}
 	
 	func setup() {
 		
@@ -119,7 +95,7 @@ class ViewController: UIViewController {
 			nextButton.isHidden = true
 			
 			// Enable all buttons
-			enableButtons()
+			buttonsEnabled(buttons: buttons, visible: true)
 			
 			// Increments question count to track how many questions the user has gotten
 			questionCount += 1
@@ -133,18 +109,6 @@ class ViewController: UIViewController {
 			question.centerVertically()
 			
 		}
-	}
-	
-	func hideButtons() {
-		let buttons: [ChoiceButton] = [choice1, choice2, choice3, choice4,]
-		for button in buttons {
-			button.isHidden = true
-		}
-	}
-	
-	func updateScore(_ pts: Int?) {
-		points += pts!
-		scoreLabel.text = "\(points)pts"
 	}
 	
 	func refreshQuestion(buttons: [ChoiceButton], questionView: QuestionView) {
@@ -168,17 +132,14 @@ class ViewController: UIViewController {
 
 	}
 	
-	func deleteQuestion(questionToDelete: Questions) {
-		
-		if let index = questionBank.firstIndex(of: questionToDelete) {
-			questionBank.remove(at: index)
-			print("Question deleted")
-		}
-		
-	}
-	
 	func tappedAnswer(_ buttonPressed: ChoiceButton) {
+		
+		// Disable buttons
+		let buttons: [ChoiceButton] = [choice1, choice2, choice3, choice4]
+		buttonsEnabled(buttons: buttons, visible: false)
+		
 		let buttonTitle = String(buttonPressed.title(for: .normal)!)
+		
 		if currentQuestion.correct.contains(buttonTitle) {
 			updateScore(10)
 			print("User selected the correct choice. User's points are now: \(points)")
@@ -189,6 +150,40 @@ class ViewController: UIViewController {
 			revealAnswer()
 			nextButton.isHidden = false
 		}
+	}
+	
+	func buttonsEnabled(buttons: [ChoiceButton], visible: Bool) {
+		if visible {
+			for button in buttons {
+				button.isEnabled = true
+			}
+		} else {
+			for button in buttons {
+				button.isEnabled = false
+			}
+		}
+		
+	}
+	
+	func hideButtons() {
+		let buttons: [ChoiceButton] = [choice1, choice2, choice3, choice4,]
+		for button in buttons {
+			button.isHidden = true
+		}
+	}
+	
+	func updateScore(_ pts: Int?) {
+		points += pts!
+		scoreLabel.text = "\(points) pts"
+	}
+	
+	func deleteQuestion(questionToDelete: Questions) {
+		
+		if let index = questionBank.firstIndex(of: questionToDelete) {
+			questionBank.remove(at: index)
+			print("Question deleted")
+		}
+		
 	}
 	
 	func revealAnswer() {
@@ -206,7 +201,6 @@ class ViewController: UIViewController {
 	}
 	
 //	MARK: - JSON Functions
-	
 	private func readLocalFile(forName name: String) -> Data? {
 		do {
 			if let bundlePath = Bundle.main.path(forResource: name,

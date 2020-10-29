@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		57507F102549CB820037FF48 /* ScoreLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57507F0F2549CB820037FF48 /* ScoreLabel.swift */; };
 		57507F122549D4010037FF48 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 57507F112549D4010037FF48 /* data.json */; };
-		57507F52254B0A880037FF48 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57507F51254B0A880037FF48 /* Trivia.swift */; };
-		57507F54254B0AD80037FF48 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57507F53254B0AD80037FF48 /* Session.swift */; };
+		57507F5A254B3EAE0037FF48 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57507F59254B3EAD0037FF48 /* Default-568h@2x.png */; };
 		5755139525476E8000F48695 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755139425476E8000F48695 /* AppDelegate.swift */; };
 		5755139725476E8000F48695 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755139625476E8000F48695 /* SceneDelegate.swift */; };
 		5755139925476E8000F48695 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755139825476E8000F48695 /* ViewController.swift */; };
@@ -38,8 +37,7 @@
 /* Begin PBXFileReference section */
 		57507F0F2549CB820037FF48 /* ScoreLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreLabel.swift; sourceTree = "<group>"; };
 		57507F112549D4010037FF48 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
-		57507F51254B0A880037FF48 /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
-		57507F53254B0AD80037FF48 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		57507F59254B3EAD0037FF48 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5755139125476E8000F48695 /* trivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5755139425476E8000F48695 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5755139625476E8000F48695 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,9 +74,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57507F55254B3D420037FF48 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5755139A25476E8000F48695 /* Main.storyboard */,
+				575513A225476E8400F48695 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		57507F56254B3D480037FF48 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5755139825476E8000F48695 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		57507F57254B3DB90037FF48 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				57C54E4B2549BAB800B8EF60 /* QuestionView.swift */,
+				57C54E492548CFA500B8EF60 /* ChoiceButton.swift */,
+				57507F0F2549CB820037FF48 /* ScoreLabel.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		57507F58254B3E4E0037FF48 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5755139425476E8000F48695 /* AppDelegate.swift */,
+				5755139625476E8000F48695 /* SceneDelegate.swift */,
+				575513A025476E8400F48695 /* Assets.xcassets */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
 		5755138825476E7F00F48695 = {
 			isa = PBXGroup;
 			children = (
+				57507F59254B3EAD0037FF48 /* Default-568h@2x.png */,
 				5755139325476E8000F48695 /* trivia */,
 				5755145C2548B25300F48695 /* triviaTests */,
 				5755139225476E8000F48695 /* Products */,
@@ -98,32 +134,25 @@
 		5755139325476E8000F48695 /* trivia */ = {
 			isa = PBXGroup;
 			children = (
-				575513B02547813C00F48695 /* Model */,
-				5755139425476E8000F48695 /* AppDelegate.swift */,
-				5755139625476E8000F48695 /* SceneDelegate.swift */,
-				57507F112549D4010037FF48 /* data.json */,
-				5755139825476E8000F48695 /* ViewController.swift */,
-				5755139A25476E8000F48695 /* Main.storyboard */,
-				575513A025476E8400F48695 /* Assets.xcassets */,
-				575513A225476E8400F48695 /* LaunchScreen.storyboard */,
 				575513A525476E8400F48695 /* Info.plist */,
-				57507F51254B0A880037FF48 /* Trivia.swift */,
-				57C54E4B2549BAB800B8EF60 /* QuestionView.swift */,
-				57C54E492548CFA500B8EF60 /* ChoiceButton.swift */,
-				57507F0F2549CB820037FF48 /* ScoreLabel.swift */,
-				57507F53254B0AD80037FF48 /* Session.swift */,
+				57507F55254B3D420037FF48 /* Views */,
+				57507F56254B3D480037FF48 /* Controllers */,
+				575513B02547813C00F48695 /* Models */,
+				57507F58254B3E4E0037FF48 /* SupportFiles */,
 			);
 			path = trivia;
 			sourceTree = "<group>";
 		};
-		575513B02547813C00F48695 /* Model */ = {
+		575513B02547813C00F48695 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				5755139D25476E8000F48695 /* trivia.xcdatamodeld */,
-				575513B12547817000F48695 /* PersistenceController.swift */,
+				57507F112549D4010037FF48 /* data.json */,
 				575514022548A3D100F48695 /* Questions.swift */,
+				575513B12547817000F48695 /* PersistenceController.swift */,
+				57507F57254B3DB90037FF48 /* UI */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		5755145C2548B25300F48695 /* triviaTests */ = {
@@ -219,6 +248,7 @@
 				575513A425476E8400F48695 /* LaunchScreen.storyboard in Resources */,
 				575513A125476E8400F48695 /* Assets.xcassets in Resources */,
 				5755139C25476E8000F48695 /* Main.storyboard in Resources */,
+				57507F5A254B3EAE0037FF48 /* Default-568h@2x.png in Resources */,
 				57507F122549D4010037FF48 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,12 +269,10 @@
 			files = (
 				57C54E4C2549BAB900B8EF60 /* QuestionView.swift in Sources */,
 				5755139925476E8000F48695 /* ViewController.swift in Sources */,
-				57507F52254B0A880037FF48 /* Trivia.swift in Sources */,
 				5755139525476E8000F48695 /* AppDelegate.swift in Sources */,
 				5755139F25476E8000F48695 /* trivia.xcdatamodeld in Sources */,
 				575514032548A3D100F48695 /* Questions.swift in Sources */,
 				5755139725476E8000F48695 /* SceneDelegate.swift in Sources */,
-				57507F54254B0AD80037FF48 /* Session.swift in Sources */,
 				575513B22547817000F48695 /* PersistenceController.swift in Sources */,
 				57507F102549CB820037FF48 /* ScoreLabel.swift in Sources */,
 				57C54E4A2548CFA500B8EF60 /* ChoiceButton.swift in Sources */,
