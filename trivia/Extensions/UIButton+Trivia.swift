@@ -10,7 +10,7 @@ import UIKit
 
 extension UIButton {
 	
-	func setUpAsChoiceButon() {
+	func setStyling() {
 		layer.borderColor = UIColor.white.cgColor
 		layer.borderWidth = CGFloat(1.0)
 		layer.cornerRadius = CGFloat(20.0)
@@ -30,7 +30,7 @@ extension UIButton {
 	}
 	
 	func reset() {
-		setUpAsChoiceButon()
+		setStyling()
 		layer.borderWidth = 0
 		layer.borderColor = UIColor.clear.cgColor
 	}

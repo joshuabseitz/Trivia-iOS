@@ -55,6 +55,8 @@ class QuestionViewController: UIViewController {
 	
 	@IBAction func didTapChoiceButton(_ sender: UIButton) {
 		
+		enableButtons(enable: false)
+		
 		if sender.titleLabel?.text == questions[currentQuestionIndex].correctChoice {
 			// Picked correct choice.
 			updateScore(10)
@@ -83,6 +85,7 @@ class QuestionViewController: UIViewController {
 		let shouldAskMoreQuestions = numberOfQuestionsAsked < maxQuestionsLimit
 		
 		if shouldAskMoreQuestions {
+			enableButtons()
 			refreshQuestion()
 			updateChoiceButtons()
 			nextButton.isHidden = true
@@ -104,6 +107,7 @@ class QuestionViewController: UIViewController {
 		var choiceIndex = 0
 		while choiceIndex <= choices.count - 1 {
 			let button = choiceButtons[choiceIndex]
+			button.setStyling()
 			button.setTitle(choices[choiceIndex], for: .normal)
 			button.isHidden = false
 			choiceIndex += 1
@@ -117,7 +121,7 @@ class QuestionViewController: UIViewController {
 		
 		// Update the question view.
 		questionView.text = questions[currentQuestionIndex].text
-		questionView.centerVertically()
+		questionView.center()
 	}
 	
 	func enableButtons(enable: Bool = true) {
