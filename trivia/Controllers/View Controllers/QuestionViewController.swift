@@ -70,6 +70,7 @@ class QuestionViewController: UIViewController {
 			revealAnswer()
 		}
 		
+		questions.remove(at: (numberOfQuestionsAsked-1))
 		nextButton.isHidden = false
 	}
 	
