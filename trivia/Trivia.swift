@@ -54,4 +54,19 @@ class Trivia {
 		}
 	}
 	
+	func deleteQuestion(questionToDelete: Questions) {
+		if let index = questions.firstIndex(of: questionToDelete) {
+			questions.remove(at: index)
+			print("Question deleted")
+		}
+	}
+	
+	func revealAnswer(session: Int) {
+		for button in buttons {
+			if button.title(for: .normal) == questions[session].correct {
+				button.reveal()
+			}
+		}
+	}
+	
 }
