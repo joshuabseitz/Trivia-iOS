@@ -96,7 +96,6 @@ class QuestionViewController: UIViewController {
 		} else {
 			for button in choiceButtons { button.isHidden = true }
 			questionView.text = "Game over – you scored \(points) points."
-			questionView.center()
 		}
 	}
 	
@@ -122,7 +121,6 @@ class QuestionViewController: UIViewController {
 		
 		// Update the question view.
 		questionView.text = questions[currentQuestionIndex].text
-		questionView.center()
 	}
 	
 	func enableButtons(enable: Bool = true) {
