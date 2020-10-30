@@ -26,6 +26,7 @@
 		576D5F01254C6797004DD7B7 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576D5F00254C6797004DD7B7 /* ScoreViewController.swift */; };
 		576D5F04254C6E97004DD7B7 /* ScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576D5F02254C6E97004DD7B7 /* ScoreTableViewCell.swift */; };
 		576D5F05254C6E97004DD7B7 /* ScoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 576D5F03254C6E97004DD7B7 /* ScoreTableViewCell.xib */; };
+		576D5F07254C9F69004DD7B7 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576D5F06254C9F69004DD7B7 /* GameOverViewController.swift */; };
 		579F96BC254B6C3B00BC9A27 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579F96BB254B6C3B00BC9A27 /* StartViewController.swift */; };
 		57BEEA92254B76A9007EF379 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BEEA91254B76A9007EF379 /* UIColor+Extensions.swift */; };
 		57C54E4A2548CFA500B8EF60 /* UIButton+Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C54E492548CFA500B8EF60 /* UIButton+Trivia.swift */; };
@@ -66,6 +67,7 @@
 		576D5F00254C6797004DD7B7 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		576D5F02254C6E97004DD7B7 /* ScoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScoreTableViewCell.swift; path = trivia/Views/ScoreTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		576D5F03254C6E97004DD7B7 /* ScoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ScoreTableViewCell.xib; path = trivia/Views/ScoreTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		576D5F06254C9F69004DD7B7 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		579F96BB254B6C3B00BC9A27 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		57BEEA91254B76A9007EF379 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		57C54E492548CFA500B8EF60 /* UIButton+Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Trivia.swift"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				579F96BB254B6C3B00BC9A27 /* StartViewController.swift */,
 				576D5F00254C6797004DD7B7 /* ScoreViewController.swift */,
 				5755139825476E8000F48695 /* QuestionViewController.swift */,
+				576D5F06254C9F69004DD7B7 /* GameOverViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				575513B22547817000F48695 /* PersistenceController.swift in Sources */,
 				57507F102549CB820037FF48 /* ScoreLabel.swift in Sources */,
 				57C54E4A2548CFA500B8EF60 /* UIButton+Trivia.swift in Sources */,
+				576D5F07254C9F69004DD7B7 /* GameOverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

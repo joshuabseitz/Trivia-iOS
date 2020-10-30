@@ -27,7 +27,7 @@ class ScoreViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-		navigationController?.setNavigationBarHidden(true, animated: false)
+//		navigationController?.setNavigationBarHidden(true, animated: false)
 		
 		self.scoreTable.dataSource = self
 		self.scoreTable.delegate = self

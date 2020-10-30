@@ -15,7 +15,6 @@ class QuestionViewController: UIViewController {
 	
 	@IBOutlet private weak var questionView: VerticallyCenteredTextView!
 	@IBOutlet private weak var nextButton: UIButton!
-	@IBOutlet weak var showScoreButton: UIButton!
 	@IBOutlet private weak var scoreLabel: ScoreLabel!
 	
 	@IBOutlet weak var choiceButton1: UIButton!
@@ -24,6 +23,7 @@ class QuestionViewController: UIViewController {
 	@IBOutlet weak var choiceButton4: UIButton!
 	
 	@IBOutlet weak var scoreView: VerticallyCenteredTextView!
+	
 	
 	//	MARK: - Properties
 	
@@ -45,9 +45,7 @@ class QuestionViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		showScoreButton.isHidden = true
-		scoreView.isHidden = true
+
 		questions = QuestionProvider.questions
 		nextButton.isHidden = true
 		navigationController?.setNavigationBarHidden(true, animated: false)
@@ -58,6 +56,16 @@ class QuestionViewController: UIViewController {
 	override var preferredStatusBarStyle: UIStatusBarStyle {
 		return .lightContent
 	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        // Determine what the segue destination is
+        if segue.destination is GameOverViewController
+        {
+            let vc = segue.destination as? GameOverViewController
+            vc?.points = points
+        }
+    }
 	
 	//	MARK: - IB Actions
 	
@@ -85,6 +93,8 @@ class QuestionViewController: UIViewController {
 	
 	@IBAction func didTapNextQuestion(_ sender: UIButton) { reloadView() }
 	
+	
+	
 	// 	MARK: - Trivia Logic
 	
 	func playSound(_ soundURL: URL) {
@@ -97,33 +107,17 @@ class QuestionViewController: UIViewController {
 	}
 	
 	func reloadView() {
-		
 		let shouldAskMoreQuestions = numberOfQuestionsAsked < maxQuestionsLimit
-		
-		if shouldAskMoreQuestions {
-			enableButtons()
-			refreshQuestion()
-			updateChoiceButtons()
-			nextButton.isHidden = true
-			numberOfQuestionsAsked += 1
-			print("Number of questions asked: \(numberOfQuestionsAsked)")
-			
-		} else {
-			for button in choiceButtons { button.isHidden = true }
-			showScoreButton.isHidden = false
-			showScoreButton.isEnabled = true
-			nextButton.isHidden = true
-			questionView.isHidden = true
-			scoreView.text = "Game over – you scored \(points) points."
-			scoreView.isHidden = false
-			
-			// CoreData: Persist score
-			let score = Score(context: PersistenceController.container.viewContext)
-			score.scoreName = "Joshua Seitz"
-			score.scorePoints = Int16(points)
-			PersistenceController.save(score)
-			print(PersistenceController.getAllScores())
-		}
+		if shouldAskMoreQuestions { askQuestion() } else { self.performSegue(withIdentifier: "gameOverSegue", sender: nil) }
+	}
+	
+	func askQuestion() {
+		enableButtons()
+		refreshQuestion()
+		updateChoiceButtons()
+		nextButton.isHidden = true
+		numberOfQuestionsAsked += 1
+		print("Number of questions asked: \(numberOfQuestionsAsked)")
 	}
 	
 	private func updateChoiceButtons() {

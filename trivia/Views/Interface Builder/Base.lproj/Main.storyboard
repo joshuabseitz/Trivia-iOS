@@ -10,6 +10,7 @@
         <!--Question View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="QuestionViewController" customModule="trivia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -103,34 +104,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Game over - you scored 10 points." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDY-9s-NJu" customClass="VerticallyCenteredTextView" customModule="trivia" customModuleProvider="target">
-                                <rect key="frame" x="30" y="294" width="354" height="309"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES"/>
-                                    <bool key="isElement" value="NO"/>
-                                </accessibility>
-                                <color key="textColor" red="0.76078431369999999" green="0.6588235294" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjm-gd-bAD">
-                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
-                                <color key="backgroundColor" red="0.76078431369999999" green="0.6588235294" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="JWe-0c-HFD"/>
-                                    <constraint firstAttribute="width" constant="414" id="Jak-jB-QId"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="TDp-OB-Hqz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Score History">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eOp-ib-6Fm"/>
-                                    <segue destination="yp9-Lj-wdE" kind="presentation" id="hjC-XD-sWF"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.14117647059999999" green="0.24313725489999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -138,16 +111,13 @@
                             <constraint firstItem="H8R-TM-JMW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="6en-Bv-Gij"/>
                             <constraint firstItem="47D-UV-hnq" firstAttribute="top" secondItem="H8R-TM-JMW" secondAttribute="bottom" constant="8" id="LRb-Bc-nFK"/>
                             <constraint firstItem="47D-UV-hnq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Lxp-1w-yYF"/>
-                            <constraint firstItem="xjm-gd-bAD" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="M8U-fg-eEO"/>
                             <constraint firstItem="V51-N2-COn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mjx-yN-d75"/>
                             <constraint firstItem="UBH-xC-wZy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="PNe-IS-N7W"/>
                             <constraint firstItem="WFy-jn-0kc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Ppa-m3-uhe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UBH-xC-wZy" secondAttribute="trailing" constant="30" id="RZd-Kl-seB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H8R-TM-JMW" secondAttribute="trailing" constant="30" id="UGf-lr-jyN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="47D-UV-hnq" secondAttribute="trailing" constant="30" id="WBi-0j-yfU"/>
-                            <constraint firstItem="xjm-gd-bAD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xdj-kl-Mw0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WFy-jn-0kc" secondAttribute="trailing" constant="30" id="Xrd-mI-Zzz"/>
-                            <constraint firstItem="xjm-gd-bAD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YnL-Am-DMH"/>
                             <constraint firstItem="H8R-TM-JMW" firstAttribute="top" secondItem="WFy-jn-0kc" secondAttribute="bottom" constant="8" id="cM1-aI-OYZ"/>
                             <constraint firstItem="9O0-J8-6xk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ceb-oY-7gS"/>
                             <constraint firstItem="WFy-jn-0kc" firstAttribute="top" secondItem="UBH-xC-wZy" secondAttribute="bottom" constant="8" id="crl-Me-Mf4"/>
@@ -167,12 +137,11 @@
                         <outlet property="questionView" destination="kpl-fH-rfa" id="6fe-mv-h7q"/>
                         <outlet property="scoreLabel" destination="V51-N2-COn" id="5bU-D0-tvP"/>
                         <outlet property="scoreView" destination="YDY-9s-NJu" id="tCF-Nq-1vd"/>
-                        <outlet property="showScoreButton" destination="xjm-gd-bAD" id="QsL-wN-ilS"/>
+                        <segue destination="o3D-3E-nFx" kind="show" identifier="gameOverSegue" id="3ps-PL-hDf"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2096" y="139"/>
+            <point key="canvasLocation" x="-2097.1014492753625" y="138.61607142857142"/>
         </scene>
         <!--Score View Controller-->
         <scene sceneID="Op3-PE-2SW">
@@ -182,7 +151,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cR2-Bx-e8H">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cR2-Bx-e8H">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.76078431369999999" green="0.6588235294" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -191,7 +160,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JWW-2i-j5E">
-                                <rect key="frame" x="66" y="72" width="283" height="698"/>
+                                <rect key="frame" x="66" y="79" width="283" height="719"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.14117647059999999" green="0.24313725489999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.76078431369999999" green="0.6588235294" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -208,7 +177,69 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebW-vt-nd9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1307.2463768115942" y="138.61607142857142"/>
+            <point key="canvasLocation" x="-613.04347826086962" y="138.61607142857142"/>
+        </scene>
+        <!--Game Over View Controller-->
+        <scene sceneID="7rm-cU-4wI">
+            <objects>
+                <viewController storyboardIdentifier="GameOverViewController" id="o3D-3E-nFx" customClass="GameOverViewController" customModule="trivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="03e-uo-JOT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjm-gd-bAD">
+                                <rect key="frame" x="31" y="800" width="352" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.76078431369999999" green="0.6588235294" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Score History">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="yp9-Lj-wdE" kind="presentation" id="dhq-iY-tYT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXf-nD-iE4">
+                                <rect key="frame" x="31" y="741" width="352" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.76078431369999999" green="0.6588235294" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Save Score">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugb-in-NUZ">
+                                <rect key="frame" x="31" y="682" width="352" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.76078431369999999" green="0.6588235294" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Game over - you scored 10 points." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDY-9s-NJu" customClass="VerticallyCenteredTextView" customModule="trivia" customModuleProvider="target">
+                                <rect key="frame" x="32" y="281" width="350" height="334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <color key="textColor" red="0.76078431369999999" green="0.6588235294" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.14117647059999999" green="0.24313725489999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="5hB-4H-DD9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ikQ-Rg-IdQ"/>
+                    <connections>
+                        <outlet property="gameOverMessage" destination="YDY-9s-NJu" id="7mp-um-WKu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="958-SV-BCe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1378.2608695652175" y="138.61607142857142"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="wtG-7v-QIM">
