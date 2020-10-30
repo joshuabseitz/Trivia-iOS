@@ -15,6 +15,7 @@ class QuestionViewController: UIViewController {
 	
 	@IBOutlet private weak var questionView: VerticallyCenteredTextView!
 	@IBOutlet private weak var nextButton: UIButton!
+	@IBOutlet weak var showScoreButton: UIButton!
 	@IBOutlet private weak var scoreLabel: ScoreLabel!
 	
 	@IBOutlet weak var choiceButton1: UIButton!
@@ -47,6 +48,7 @@ class QuestionViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		showScoreButton.isHidden = true
 		scoreView.isHidden = true
 		title = "Trivia"
 		questions = QuestionProvider.questions
@@ -65,16 +67,15 @@ class QuestionViewController: UIViewController {
 	@IBAction func didTapChoiceButton(_ sender: UIButton) {
 		
 		enableButtons(enable: false)
+		let choiceIsCorrect = sender.titleLabel?.text == questions[currentQuestionIndex].correctChoice
 		
-		if sender.titleLabel?.text == questions[currentQuestionIndex].correctChoice {
-			// Picked correct choice.
+		if choiceIsCorrect {
 			playSound(correctSound)
 			updateScore(10)
 			print("User selected the correct choice. User's points are now: \(points)")
 			revealAnswer()
 			
 		} else {
-			// Picked incorrect choice.
 			print("User selected incorrect choice.")
 			playSound(incorrectSound)
 			sender.highlightIncorrect()
@@ -82,14 +83,10 @@ class QuestionViewController: UIViewController {
 		}
 		
 		questions.remove(at: (currentQuestionIndex))
-		
 		nextButton.isHidden = false
 	}
 	
-	@IBAction func didTapNextQuestion(_ sender: UIButton) {
-		reloadView()
-	}
-	
+	@IBAction func didTapNextQuestion(_ sender: UIButton) { reloadView() }
 	
 	// 	MARK: - Trivia Logic
 	
@@ -116,6 +113,9 @@ class QuestionViewController: UIViewController {
 			
 		} else {
 			for button in choiceButtons { button.isHidden = true }
+			showScoreButton.isHidden = false
+			showScoreButton.isEnabled = true
+			nextButton.isHidden = true
 			questionView.isHidden = true
 			scoreView.text = "Game over – you scored \(points) points."
 			scoreView.isHidden = false

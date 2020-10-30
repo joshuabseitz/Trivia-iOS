@@ -23,6 +23,7 @@
 		575513B22547817000F48695 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575513B12547817000F48695 /* PersistenceController.swift */; };
 		575514032548A3D100F48695 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575514022548A3D100F48695 /* Question.swift */; };
 		5755145E2548B25300F48695 /* triviaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755145D2548B25300F48695 /* triviaTests.swift */; };
+		576D5F01254C6797004DD7B7 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576D5F00254C6797004DD7B7 /* ScoreViewController.swift */; };
 		579F96BC254B6C3B00BC9A27 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579F96BB254B6C3B00BC9A27 /* StartViewController.swift */; };
 		57BEEA92254B76A9007EF379 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BEEA91254B76A9007EF379 /* UIColor+Extensions.swift */; };
 		57C54E4A2548CFA500B8EF60 /* UIButton+Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C54E492548CFA500B8EF60 /* UIButton+Trivia.swift */; };
@@ -60,6 +61,7 @@
 		5755145B2548B25300F48695 /* triviaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = triviaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5755145D2548B25300F48695 /* triviaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = triviaTests.swift; sourceTree = "<group>"; };
 		5755145F2548B25300F48695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		576D5F00254C6797004DD7B7 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		579F96BB254B6C3B00BC9A27 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		57BEEA91254B76A9007EF379 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		57C54E492548CFA500B8EF60 /* UIButton+Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Trivia.swift"; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				579F96BB254B6C3B00BC9A27 /* StartViewController.swift */,
+				576D5F00254C6797004DD7B7 /* ScoreViewController.swift */,
 				5755139825476E8000F48695 /* QuestionViewController.swift */,
 			);
 			path = "View Controllers";
@@ -305,6 +308,7 @@
 				5755139525476E8000F48695 /* AppDelegate.swift in Sources */,
 				5755139F25476E8000F48695 /* trivia.xcdatamodeld in Sources */,
 				57507F63254B60E30037FF48 /* QuestionProvider.swift in Sources */,
+				576D5F01254C6797004DD7B7 /* ScoreViewController.swift in Sources */,
 				579F96BC254B6C3B00BC9A27 /* StartViewController.swift in Sources */,
 				575514032548A3D100F48695 /* Question.swift in Sources */,
 				57BEEA92254B76A9007EF379 /* UIColor+Extensions.swift in Sources */,
