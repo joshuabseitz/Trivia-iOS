@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class QuestionViewController: UIViewController {
 	
@@ -30,6 +31,10 @@ class QuestionViewController: UIViewController {
 	private var points = 0
 	private let maxQuestionsLimit = 10
 	private var numberOfQuestionsAsked = 0
+	
+	//Audio
+	var correctSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "correct", ofType: "wav")!)
+	var audioPlayer = AVAudioPlayer()
 	
 	/// A convenient collection of all choice buttons.
 	private var choiceButtons: [UIButton] {
@@ -62,6 +67,7 @@ class QuestionViewController: UIViewController {
 		
 		if sender.titleLabel?.text == questions[currentQuestionIndex].correctChoice {
 			// Picked correct choice.
+			playCorrectSound()
 			updateScore(10)
 			print("User selected the correct choice. User's points are now: \(points)")
 			revealAnswer()
@@ -84,6 +90,15 @@ class QuestionViewController: UIViewController {
 	
 	
 	// 	MARK: - Trivia Logic
+	
+	func playCorrectSound() {
+		do {
+			audioPlayer = try AVAudioPlayer(contentsOf: correctSound as URL)
+			 audioPlayer.play()
+		} catch {
+		   print("Couldn't find the audio source for correctSound.")
+		}
+	}
 	
 	func reloadView() {
 		
