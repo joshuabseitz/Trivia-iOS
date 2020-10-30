@@ -50,7 +50,6 @@ class QuestionViewController: UIViewController {
 		
 		showScoreButton.isHidden = true
 		scoreView.isHidden = true
-		title = "Trivia"
 		questions = QuestionProvider.questions
 		nextButton.isHidden = true
 		navigationController?.setNavigationBarHidden(true, animated: false)
