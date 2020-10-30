@@ -33,12 +33,10 @@ class QuestionViewController: UIViewController {
 	private let maxQuestionsLimit = 10
 	private var numberOfQuestionsAsked = 0
 	
-	//Audio
-	var correctSound = URL(fileURLWithPath: Bundle.main.path(forResource: "correctSound", ofType: "wav")!)
-	var incorrectSound = URL(fileURLWithPath: Bundle.main.path(forResource: "incorrectSound", ofType: "wav")!)
-	var audioPlayer = AVAudioPlayer()
-	
-	/// A convenient collection of all choice buttons.
+	private var correctSound = URL(fileURLWithPath: Bundle.main.path(forResource: "correctSound", ofType: "wav")!)
+	private var incorrectSound = URL(fileURLWithPath: Bundle.main.path(forResource: "incorrectSound", ofType: "wav")!)
+	private var audioPlayer = AVAudioPlayer()
+
 	private var choiceButtons: [UIButton] {
 		[choiceButton1, choiceButton2, choiceButton3, choiceButton4]
 	}
@@ -119,6 +117,7 @@ class QuestionViewController: UIViewController {
 			scoreView.text = "Game over – you scored \(points) points."
 			scoreView.isHidden = false
 			
+			// CoreData: Persist score
 			let score = Score(context: PersistenceController.container.viewContext)
 			score.scoreName = "Joshua Seitz"
 			score.scorePoints = Int16(points)

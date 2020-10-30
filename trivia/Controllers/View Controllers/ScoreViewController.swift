@@ -14,7 +14,7 @@ import UIKit
 
 class ScoreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
-	let data = ["One","Two","Three","Four","Five",]
+	let data = PersistenceController.getAllScores()
 
 	@IBOutlet weak var scoreTable: UITableView!
 	
@@ -49,8 +49,8 @@ class ScoreViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	func tableView(_ tableView: UITableView,
 				   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		if let cell = scoreTable.dequeueReusableCell(withIdentifier: "ScoreTableViewCell") as? ScoreTableViewCell {
-			cell.scoreName.text = "Jane Smith"
-			cell.scorePoints.text = "500 Points"
+			cell.scoreName.text = data[indexPath.row].scoreName
+			cell.scorePoints.text = String(data[indexPath.row].scorePoints)
 			return cell
 		}
 		
