@@ -216,6 +216,9 @@
                                 <state key="normal" title="Play Again">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Wga-T7-H8a"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Game over - you scored 10 points." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDY-9s-NJu" customClass="VerticallyCenteredTextView" customModule="trivia" customModuleProvider="target">
                                 <rect key="frame" x="32" y="281" width="350" height="334"/>
@@ -264,7 +267,7 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="rBs-fS-5lB"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tandem Trivia Code Challenge" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUv-zk-wve" customClass="VerticallyCenteredTextView" customModule="trivia" customModuleProvider="target">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tandem Trivia" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUv-zk-wve" customClass="VerticallyCenteredTextView" customModule="trivia" customModuleProvider="target">
                                 <rect key="frame" x="31" y="222" width="352" height="453"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gUv-zk-wve" secondAttribute="height" multiplier="352:453" id="8Ag-xW-aUH"/>
@@ -310,4 +313,7 @@
             <point key="canvasLocation" x="-3762" y="139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="rBs-fS-5lB"/>
+    </inferredMetricsTieBreakers>
 </document>
