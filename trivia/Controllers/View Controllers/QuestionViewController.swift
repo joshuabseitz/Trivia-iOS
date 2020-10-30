@@ -71,7 +71,7 @@ class QuestionViewController: UIViewController {
 	
 	@IBAction func didTapChoiceButton(_ sender: UIButton) {
 		
-		enableButtons(enable: false)
+		enableChoiceButtons(enable: false)
 		let choiceIsCorrect = sender.titleLabel?.text == questions[currentQuestionIndex].correctChoice
 		
 		if choiceIsCorrect {
@@ -112,7 +112,7 @@ class QuestionViewController: UIViewController {
 	}
 	
 	func askQuestion() {
-		enableButtons()
+		enableChoiceButtons()
 		refreshQuestion()
 		updateChoiceButtons()
 		nextButton.isHidden = true
@@ -144,7 +144,7 @@ class QuestionViewController: UIViewController {
 		questionView.text = questions[currentQuestionIndex].text
 	}
 	
-	func enableButtons(enable: Bool = true) {
+	func enableChoiceButtons(enable: Bool = true) {
 		for button in choiceButtons { button.isEnabled = enable }
 	}
 	
