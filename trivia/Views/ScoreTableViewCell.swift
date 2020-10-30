@@ -10,7 +10,11 @@ import UIKit
 
 class ScoreTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
+	@IBOutlet weak var scoreName: UILabel!
+	@IBOutlet weak var scorePoints: UILabel!
+	
+	
+	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }

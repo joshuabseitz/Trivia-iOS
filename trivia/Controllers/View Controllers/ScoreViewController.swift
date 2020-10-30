@@ -15,21 +15,6 @@ import UIKit
 class ScoreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
 	let data = ["One","Two","Three","Four","Five",]
-	
-	func tableView(_ tableView: UITableView,
-                   numberOfRowsInSection section: Int) -> Int {
-        return self.data.count
-    }
-	
-	func tableView(_ tableView: UITableView,
-				   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		if let cell = scoreTable.dequeueReusableCell(withIdentifier: "ScoreTableViewCell") as? ScoreTableViewCell {
-			return cell
-		}
-		
-		return UITableViewCell()
-	}
-	
 
 	@IBOutlet weak var scoreTable: UITableView!
 	
@@ -46,11 +31,30 @@ class ScoreViewController: UIViewController, UITableViewDelegate, UITableViewDat
 		return .lightContent
 	}
 	
+	/// Registeres tableview with custom cell
 	private func registerTableViewCells() {
 		let scoreLabelCell = UINib(nibName: "ScoreTableViewCell",
 								  bundle: nil)
 		self.scoreTable.register(scoreLabelCell,
 								forCellReuseIdentifier: "ScoreTableViewCell")
+	}
+	
+	/// Defines the number of rows, acoording to data
+	func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
+        return self.data.count
+    }
+	
+	
+	func tableView(_ tableView: UITableView,
+				   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		if let cell = scoreTable.dequeueReusableCell(withIdentifier: "ScoreTableViewCell") as? ScoreTableViewCell {
+			cell.scoreName.text = "Jane Smith"
+			cell.scorePoints.text = "500 Points"
+			return cell
+		}
+		
+		return UITableViewCell()
 	}
 	
 }
