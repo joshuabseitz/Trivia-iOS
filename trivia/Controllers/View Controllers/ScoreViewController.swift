@@ -14,7 +14,16 @@ import UIKit
 
 class ScoreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
-	let data = PersistenceController.getAllScores()
+//	let data = PersistenceController.getAllScores()
+	
+	/// Grabs data from persistence controller and sorts it highest point first
+	private var data: [Score] {
+		
+		var data = PersistenceController.getAllScores()
+		data = data.sorted(by: { $1.scorePoints < $0.scorePoints})
+		return data
+		
+	}
 
 	@IBOutlet weak var scoreTable: UITableView!
 	
