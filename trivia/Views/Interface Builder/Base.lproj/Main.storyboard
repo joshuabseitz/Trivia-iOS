@@ -29,7 +29,7 @@
                                     <action selector="didTapNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bT5-iu-obn"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="What is the top speed an average cat can travel?" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpl-fH-rfa" customClass="QuestionView" customModule="trivia" customModuleProvider="target">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="What is the top speed an average cat can travel?" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpl-fH-rfa">
                                 <rect key="frame" x="30" y="158" width="354" height="309"/>
                                 <color key="textColor" red="0.76078431372549016" green="0.6588235294117647" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
