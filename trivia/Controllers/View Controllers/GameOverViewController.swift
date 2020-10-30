@@ -28,6 +28,10 @@ class GameOverViewController: UIViewController {
 		gameOverMessage.text = "Game over – you scored \(points) points."
     }
 	
+	override var preferredStatusBarStyle: UIStatusBarStyle {
+		return .lightContent
+	}
+	
 	func saveScore() {
 		let score = Score(context: PersistenceController.container.viewContext)
 		score.scoreName = playerName
