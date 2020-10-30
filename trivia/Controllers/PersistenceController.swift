@@ -13,7 +13,7 @@ struct PersistenceController {
 	
 	static var container: NSPersistentContainer!
 	
-	static func save(_ highscore: Highscore) {
+	static func save(_ score: Score) {
 		
 		do {
 			try container.viewContext.save()
@@ -22,14 +22,14 @@ struct PersistenceController {
 		}
 	}
 	
-	static func getAllHighscores() -> [Highscore] {
-		let highscoreFetchRequest: NSFetchRequest<Highscore> = Highscore.fetchRequest()
+	static func getAllScores() -> [Score] {
+		let highscoreFetchRequest: NSFetchRequest<Score> = Score.fetchRequest()
 		let highscoreResult = try! container.viewContext.fetch(highscoreFetchRequest)
 		return highscoreResult
 	}
 	
-	static func delete(_ highscore: Highscore){
-		container.viewContext.delete(highscore)
+	static func delete(_ score: Score){
+		container.viewContext.delete(score)
 		try! container.viewContext.save()
 	}
 }
