@@ -43,6 +43,7 @@ class QuestionViewController: UIViewController {
 		questions = QuestionProvider.questions
 		nextButton.isHidden = true
 		navigationController?.setNavigationBarHidden(true, animated: false)
+		updateChoiceButtons()
 		reloadView()
 	}
 	
@@ -69,7 +70,8 @@ class QuestionViewController: UIViewController {
 			revealAnswer()
 		}
 		
-		questions.remove(at: (numberOfQuestionsAsked-1))
+		questions.remove(at: (currentQuestionIndex))
+		
 		nextButton.isHidden = false
 	}
 	
