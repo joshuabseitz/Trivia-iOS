@@ -12,7 +12,7 @@ class QuestionViewController: UIViewController {
 	
 	//	MARK: - IBOutlets
 	
-	@IBOutlet private weak var questionView: UITextView!
+	@IBOutlet private weak var questionView: VerticallyCenteredTextView!
 	@IBOutlet private weak var nextButton: UIButton!
 	@IBOutlet private weak var scoreLabel: ScoreLabel!
 	
@@ -20,6 +20,8 @@ class QuestionViewController: UIViewController {
 	@IBOutlet weak var choiceButton2: UIButton!
 	@IBOutlet weak var choiceButton3: UIButton!
 	@IBOutlet weak var choiceButton4: UIButton!
+	
+	@IBOutlet weak var scoreView: VerticallyCenteredTextView!
 	
 	//	MARK: - Properties
 	
@@ -39,6 +41,7 @@ class QuestionViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		scoreView.isHidden = true
 		title = "Trivia"
 		questions = QuestionProvider.questions
 		nextButton.isHidden = true
@@ -96,8 +99,9 @@ class QuestionViewController: UIViewController {
 			
 		} else {
 			for button in choiceButtons { button.isHidden = true }
-			questionView.text = "Game over – you scored \(points) points."
-			questionView.centerText()
+			questionView.isHidden = true
+			scoreView.text = "Game over – you scored \(points) points."
+			scoreView.isHidden = false
 		}
 	}
 	
@@ -123,7 +127,6 @@ class QuestionViewController: UIViewController {
 		
 		// Update the question view.
 		questionView.text = questions[currentQuestionIndex].text
-		questionView.centerText()
 	}
 	
 	func enableButtons(enable: Bool = true) {
