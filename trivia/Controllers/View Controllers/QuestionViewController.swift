@@ -76,7 +76,7 @@ class QuestionViewController: UIViewController {
 		} else {
 			// Picked incorrect choice.
 			print("User selected incorrect choice.")
-//			playSound(incorrectSound)
+			playSound(incorrectSound)
 			sender.highlightIncorrect()
 			revealAnswer()
 		}
