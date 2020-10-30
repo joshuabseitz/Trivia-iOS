@@ -43,7 +43,6 @@ class QuestionViewController: UIViewController {
 		questions = QuestionProvider.questions
 		nextButton.isHidden = true
 		navigationController?.setNavigationBarHidden(true, animated: false)
-		updateChoiceButtons()
 		reloadView()
 	}
 	
@@ -96,6 +95,7 @@ class QuestionViewController: UIViewController {
 		} else {
 			for button in choiceButtons { button.isHidden = true }
 			questionView.text = "Game over – you scored \(points) points."
+			questionView.centerVertically()
 		}
 	}
 	

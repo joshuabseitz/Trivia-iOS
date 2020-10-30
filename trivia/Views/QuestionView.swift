@@ -13,17 +13,12 @@ class QuestionView: UITextView {
 	
 	override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
-        setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
+        centerVertically()
     }
-	
-	func setup() {
-		centerVertically()
-	}
 	
 	func centerVertically() {
         let fittingSize = CGSize(width: bounds.width, height: CGFloat.greatestFiniteMagnitude)
@@ -32,9 +27,4 @@ class QuestionView: UITextView {
         let positiveTopOffset = max(1, topOffset)
         contentOffset.y = -positiveTopOffset
     }
-	
-	func center() {
-		frame = CGRect(x: 31, y: 295, width: 352, height: 307)
-		centerVertically()
-	}
 }
