@@ -121,7 +121,7 @@ class QuestionViewController: UIViewController {
 			
 			let score = Score(context: PersistenceController.container.viewContext)
 			score.scoreName = "Joshua Seitz"
-			score.scorePoints = 10
+			score.scorePoints = Int16(points)
 			PersistenceController.save(score)
 			print(PersistenceController.getAllScores())
 		}
