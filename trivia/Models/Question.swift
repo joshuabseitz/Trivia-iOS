@@ -14,14 +14,14 @@ struct Question: Decodable, Equatable {
 	let correctChoice: String
 	let incorrectChoices: [String]
 	
-	// Set up a custom value name for matching json value name.
+	/// Set up a custom value name for matching json value name
 	private enum CodingKeys: String, CodingKey {
         case text = "question"
 		case incorrectChoices = "incorrect"
 		case correctChoice = "correct"
     }
 	
-	/// All choices for this question, randomized.
+	/// All choices for this question, randomized
 	var randomizedChoices: [String] {
 		var randomizedChoices = incorrectChoices
 		randomizedChoices.append(correctChoice)

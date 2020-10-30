@@ -118,6 +118,12 @@ class QuestionViewController: UIViewController {
 			questionView.isHidden = true
 			scoreView.text = "Game over – you scored \(points) points."
 			scoreView.isHidden = false
+			
+			let score = Score(context: PersistenceController.container.viewContext)
+			score.scoreName = "Joshua Seitz"
+			score.scorePoints = 10
+			PersistenceController.save(score)
+			print(PersistenceController.getAllScores())
 		}
 	}
 	
