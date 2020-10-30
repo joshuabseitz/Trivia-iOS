@@ -24,6 +24,8 @@
 		575514032548A3D100F48695 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575514022548A3D100F48695 /* Question.swift */; };
 		5755145E2548B25300F48695 /* triviaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755145D2548B25300F48695 /* triviaTests.swift */; };
 		576D5F01254C6797004DD7B7 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576D5F00254C6797004DD7B7 /* ScoreViewController.swift */; };
+		576D5F04254C6E97004DD7B7 /* ScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576D5F02254C6E97004DD7B7 /* ScoreTableViewCell.swift */; };
+		576D5F05254C6E97004DD7B7 /* ScoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 576D5F03254C6E97004DD7B7 /* ScoreTableViewCell.xib */; };
 		579F96BC254B6C3B00BC9A27 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579F96BB254B6C3B00BC9A27 /* StartViewController.swift */; };
 		57BEEA92254B76A9007EF379 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BEEA91254B76A9007EF379 /* UIColor+Extensions.swift */; };
 		57C54E4A2548CFA500B8EF60 /* UIButton+Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C54E492548CFA500B8EF60 /* UIButton+Trivia.swift */; };
@@ -62,6 +64,8 @@
 		5755145D2548B25300F48695 /* triviaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = triviaTests.swift; sourceTree = "<group>"; };
 		5755145F2548B25300F48695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		576D5F00254C6797004DD7B7 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		576D5F02254C6E97004DD7B7 /* ScoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScoreTableViewCell.swift; path = trivia/Views/ScoreTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		576D5F03254C6E97004DD7B7 /* ScoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ScoreTableViewCell.xib; path = trivia/Views/ScoreTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		579F96BB254B6C3B00BC9A27 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		57BEEA91254B76A9007EF379 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		57C54E492548CFA500B8EF60 /* UIButton+Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Trivia.swift"; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 			children = (
 				57507F0F2549CB820037FF48 /* ScoreLabel.swift */,
 				57C54E4B2549BAB800B8EF60 /* VerticallyCenteredTextView.swift */,
+				576D5F02254C6E97004DD7B7 /* ScoreTableViewCell.swift */,
+				576D5F03254C6E97004DD7B7 /* ScoreTableViewCell.xib */,
 				57507F61254B60640037FF48 /* Interface Builder */,
 			);
 			path = Views;
@@ -285,6 +291,7 @@
 				575513A125476E8400F48695 /* Assets.xcassets in Resources */,
 				5755139C25476E8000F48695 /* Main.storyboard in Resources */,
 				57507F5A254B3EAE0037FF48 /* Default-568h@2x.png in Resources */,
+				576D5F05254C6E97004DD7B7 /* ScoreTableViewCell.xib in Resources */,
 				57507F122549D4010037FF48 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +312,7 @@
 			files = (
 				57C54E4C2549BAB900B8EF60 /* VerticallyCenteredTextView.swift in Sources */,
 				5755139925476E8000F48695 /* QuestionViewController.swift in Sources */,
+				576D5F04254C6E97004DD7B7 /* ScoreTableViewCell.swift in Sources */,
 				5755139525476E8000F48695 /* AppDelegate.swift in Sources */,
 				5755139F25476E8000F48695 /* trivia.xcdatamodeld in Sources */,
 				57507F63254B60E30037FF48 /* QuestionProvider.swift in Sources */,

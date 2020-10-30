@@ -128,7 +128,7 @@
                                 </state>
                                 <connections>
                                     <action selector="didTapNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eOp-ib-6Fm"/>
-                                    <segue destination="yp9-Lj-wdE" kind="show" id="hjC-XD-sWF"/>
+                                    <segue destination="yp9-Lj-wdE" kind="presentation" id="hjC-XD-sWF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -174,21 +174,41 @@
             </objects>
             <point key="canvasLocation" x="-2096" y="139"/>
         </scene>
-        <!--View Controller-->
+        <!--Score View Controller-->
         <scene sceneID="Op3-PE-2SW">
             <objects>
-                <viewController id="yp9-Lj-wdE" sceneMemberID="viewController">
+                <viewController id="yp9-Lj-wdE" customClass="ScoreViewController" customModule="trivia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gss-k5-gXm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cR2-Bx-e8H">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.76078431369999999" green="0.6588235294" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JWW-2i-j5E">
+                                <rect key="frame" x="29" y="92" width="357" height="310"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.14117647059999999" green="0.24313725489999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.76078431369999999" green="0.6588235294" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.14117647059999999" green="0.24313725489999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.14117647059999999" green="0.24313725489999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="TKt-6E-tFl"/>
                     </view>
                     <navigationItem key="navigationItem" id="25N-Gd-apc"/>
+                    <connections>
+                        <outlet property="scoreTable" destination="JWW-2i-j5E" id="ZS9-du-TeC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebW-vt-nd9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1307" y="139"/>
+            <point key="canvasLocation" x="-1307.2463768115942" y="138.61607142857142"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="wtG-7v-QIM">
