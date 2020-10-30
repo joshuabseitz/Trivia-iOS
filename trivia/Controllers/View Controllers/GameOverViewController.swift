@@ -53,7 +53,7 @@ class GameOverViewController: UIViewController {
 		
 		alert.addAction(UIAlertAction(title: actionTitle, style: .default, handler: { [weak alert] (_) in
 			let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
-			self.playerName = textField!.text! // Force unwrapped ):
+			self.playerName = textField!.text ?? "Unknown" // Force unwrapped ):
 			self.saveScore()
 		}))
 		
