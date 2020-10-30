@@ -53,7 +53,7 @@ class ScoreViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		if let cell = scoreTable.dequeueReusableCell(withIdentifier: "ScoreTableViewCell") as? ScoreTableViewCell {
 			cell.scoreName.text = data[indexPath.row].scoreName
-			cell.scorePoints.text = String(data[indexPath.row].scorePoints)
+			cell.scorePoints.text = "\(data[indexPath.row].scorePoints) pts"
 			return cell
 		}
 		return UITableViewCell()
