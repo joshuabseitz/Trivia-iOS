@@ -97,7 +97,7 @@ class QuestionViewController: UIViewController {
 		} else {
 			for button in choiceButtons { button.isHidden = true }
 			questionView.text = "Game over – you scored \(points) points."
-			questionView.centerVertically()
+			questionView.centerText()
 		}
 	}
 	
@@ -123,6 +123,7 @@ class QuestionViewController: UIViewController {
 		
 		// Update the question view.
 		questionView.text = questions[currentQuestionIndex].text
+		questionView.centerText()
 	}
 	
 	func enableButtons(enable: Bool = true) {
@@ -146,4 +147,17 @@ class QuestionViewController: UIViewController {
 			}
 		}
 	}
+}
+
+extension UITextView {
+
+    func centerText() {
+        self.textAlignment = .center
+        let fittingSize = CGSize(width: bounds.width, height: CGFloat.greatestFiniteMagnitude)
+        let size = sizeThatFits(fittingSize)
+        let topOffset = (bounds.size.height - size.height * zoomScale) / 2
+        let positiveTopOffset = max(1, topOffset)
+        contentOffset.y = -positiveTopOffset
+    }
+
 }
