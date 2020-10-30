@@ -33,7 +33,8 @@ class QuestionViewController: UIViewController {
 	private var numberOfQuestionsAsked = 0
 	
 	//Audio
-	var correctSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "correct", ofType: "wav")!)
+	var correctSound = URL(fileURLWithPath: Bundle.main.path(forResource: "correctSound", ofType: "wav")!)
+	var incorrectSound = URL(fileURLWithPath: Bundle.main.path(forResource: "incorrectSound", ofType: "wav")!)
 	var audioPlayer = AVAudioPlayer()
 	
 	/// A convenient collection of all choice buttons.
@@ -67,7 +68,7 @@ class QuestionViewController: UIViewController {
 		
 		if sender.titleLabel?.text == questions[currentQuestionIndex].correctChoice {
 			// Picked correct choice.
-			playCorrectSound()
+			playSound(correctSound)
 			updateScore(10)
 			print("User selected the correct choice. User's points are now: \(points)")
 			revealAnswer()
@@ -75,6 +76,7 @@ class QuestionViewController: UIViewController {
 		} else {
 			// Picked incorrect choice.
 			print("User selected incorrect choice.")
+//			playSound(incorrectSound)
 			sender.highlightIncorrect()
 			revealAnswer()
 		}
@@ -91,12 +93,12 @@ class QuestionViewController: UIViewController {
 	
 	// 	MARK: - Trivia Logic
 	
-	func playCorrectSound() {
+	func playSound(_ soundURL: URL) {
 		do {
-			audioPlayer = try AVAudioPlayer(contentsOf: correctSound as URL)
-			 audioPlayer.play()
+			audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+			audioPlayer.play()
 		} catch {
-		   print("Couldn't find the audio source for correctSound.")
+		   print("Couldn't find the audio source for \(soundURL).")
 		}
 	}
 	

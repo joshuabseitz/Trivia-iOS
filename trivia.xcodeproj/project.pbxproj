@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57467187254BDE4900FBA831 /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 57467186254BDE4800FBA831 /* correct.wav */; };
+		57467187254BDE4900FBA831 /* correctSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 57467186254BDE4800FBA831 /* correctSound.wav */; };
+		57467189254BE2C200FBA831 /* incorrectSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 57467188254BE2C200FBA831 /* incorrectSound.wav */; };
 		57507F102549CB820037FF48 /* ScoreLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57507F0F2549CB820037FF48 /* ScoreLabel.swift */; };
 		57507F122549D4010037FF48 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 57507F112549D4010037FF48 /* data.json */; };
 		57507F5A254B3EAE0037FF48 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57507F59254B3EAD0037FF48 /* Default-568h@2x.png */; };
@@ -39,7 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		57467186254BDE4800FBA831 /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = correct.wav; path = ../../../Downloads/correct.wav; sourceTree = "<group>"; };
+		57467186254BDE4800FBA831 /* correctSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = correctSound.wav; path = ../../../Downloads/correctSound.wav; sourceTree = "<group>"; };
+		57467188254BE2C200FBA831 /* incorrectSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = incorrectSound.wav; path = ../../../Downloads/incorrectSound.wav; sourceTree = "<group>"; };
 		57507F0F2549CB820037FF48 /* ScoreLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreLabel.swift; sourceTree = "<group>"; };
 		57507F112549D4010037FF48 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		57507F59254B3EAD0037FF48 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -176,7 +178,8 @@
 				57507F5C254B47260037FF48 /* Views */,
 				57507F5F254B5FCF0037FF48 /* Controllers */,
 				57507F112549D4010037FF48 /* data.json */,
-				57467186254BDE4800FBA831 /* correct.wav */,
+				57467188254BE2C200FBA831 /* incorrectSound.wav */,
+				57467186254BDE4800FBA831 /* correctSound.wav */,
 				575513A025476E8400F48695 /* Assets.xcassets */,
 				575513A525476E8400F48695 /* Info.plist */,
 			);
@@ -274,7 +277,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				575513A425476E8400F48695 /* LaunchScreen.storyboard in Resources */,
-				57467187254BDE4900FBA831 /* correct.wav in Resources */,
+				57467189254BE2C200FBA831 /* incorrectSound.wav in Resources */,
+				57467187254BDE4900FBA831 /* correctSound.wav in Resources */,
 				575513A125476E8400F48695 /* Assets.xcassets in Resources */,
 				5755139C25476E8000F48695 /* Main.storyboard in Resources */,
 				57507F5A254B3EAE0037FF48 /* Default-568h@2x.png in Resources */,
