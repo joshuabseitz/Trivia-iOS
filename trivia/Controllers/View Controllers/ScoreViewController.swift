@@ -18,11 +18,9 @@ class ScoreViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	
 	/// Grabs data from persistence controller and sorts it highest point first
 	private var data: [Score] {
-		
 		var data = PersistenceController.getAllScores()
 		data = data.sorted(by: { $1.scorePoints < $0.scorePoints})
 		return data
-		
 	}
 
 	@IBOutlet weak var scoreTable: UITableView!
@@ -42,27 +40,22 @@ class ScoreViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	
 	/// Registeres tableview with custom cell
 	private func registerTableViewCells() {
-		let scoreLabelCell = UINib(nibName: "ScoreTableViewCell",
-								  bundle: nil)
-		self.scoreTable.register(scoreLabelCell,
-								forCellReuseIdentifier: "ScoreTableViewCell")
+		let scoreLabelCell = UINib(nibName: "ScoreTableViewCell", bundle: nil)
+		self.scoreTable.register(scoreLabelCell, forCellReuseIdentifier: "ScoreTableViewCell")
 	}
 	
 	/// Defines the number of rows, acoording to data
-	func tableView(_ tableView: UITableView,
-                   numberOfRowsInSection section: Int) -> Int {
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.data.count
     }
 	
 	
-	func tableView(_ tableView: UITableView,
-				   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		if let cell = scoreTable.dequeueReusableCell(withIdentifier: "ScoreTableViewCell") as? ScoreTableViewCell {
 			cell.scoreName.text = data[indexPath.row].scoreName
 			cell.scorePoints.text = String(data[indexPath.row].scorePoints)
 			return cell
 		}
-		
 		return UITableViewCell()
 	}
 	
