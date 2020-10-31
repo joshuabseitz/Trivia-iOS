@@ -23,15 +23,22 @@ class PersistenceControllerTests: XCTestCase {
 		// Get allScores
 		let allScores = PersistenceController.getAllScores()
 		
-		// Test that allScores contains testScore
-		XCTAssertTrue(allScores.contains(testScore))
+		if !allScores.isEmpty {
+			
+			// Test that allScores contains testScore
+			XCTAssertTrue(allScores.contains(testScore))
+		
+		} else {
+			
+			XCTFail("PersistenceController returned a value of nil for .getAllScores()")
+		}
 		
 		// Delete testScore
 		PersistenceController.delete(testScore)
 		
 	}
 	
-	///Does QuestionProvider.getQuestions return an array of type Question?
+	///Does the PersistenceController delete properly?
 	func testCoreDataDelete() {
 		
 		// Create testScore
