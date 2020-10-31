@@ -3,7 +3,7 @@ This is an iOS trivia app, built for Tandem's Apprentice Software Engineering co
 
 ## How to Play Tandem Trivia ⚡
 * Clone the project to XCode 12 with this link: https://github.com/joshuabseitz/trivia.git
-* Select <b>iPhone 11 Pro Max</b> as your simulator, for best experience
+* Select <b>iPhone 11 Pro Max</b> as your simulator, for optimal experience
 * Hit <b>cmd + r</b> and start answering questions!
 
 ## Key Features of Tandem Trivia for iOS
