@@ -1,5 +1,5 @@
 # Tandem Trivia for iOS 📱🕹
-This is an iOS trivia app, built for Tandem's Apprentice Software Engineering code challenge. Information about this code challenge can be found [here](https://madeintandem.com/wp-content/uploads/2020/10/Tandem_Apprentice_Challenge_2020.zip).
+This is a trivia app for iOS build for a Tandem code challenge. The app is built with [these assumptions and requirements](#tandem-trivia) in mind, in addition to features described [here](#key-features-of-tandem-trivia)
 
 ## How to Play Tandem Trivia ⚡
 * Clone the project to XCode 12 with this link: https://github.com/joshuabseitz/trivia.git
@@ -17,6 +17,9 @@ This is an iOS trivia app, built for Tandem's Apprentice Software Engineering co
 Trivia Game | Saving Score
 :--:|:--:
 <img src="/demo/questions.gif" width="220" height="480"/> | <img src="/demo/savescore.gif" width="220" height="480"/>
+
+# Tandem Trivia
+This app was built for Tandem's (previously, DevMynd) Software Engineering Aprrentice application. Details for this code challenge can be found on [this slideshow](https://madeintandem.com/wp-content/uploads/2020/10/Tandem_Apprentice_Challenge_2020.zip).
 
 ## Assumptions
 * Round of triva has 10 questions
