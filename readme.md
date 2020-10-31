@@ -8,7 +8,7 @@ This is an iOS trivia app, built for Tandem's 2020 Apprentice Software Engineeri
 * 💾 Uses CoreData to save and persist highscores from users
 
 ## 🎬 Tandem Trivia in Action
-<img src="/demo/questions.gif" width="250" height="250"/>
+<img src="/demo/questions.gif" width="110" height="240"/>
 
 ## Assumptions
 * Round of triva has 10 questions
