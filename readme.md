@@ -1,7 +1,7 @@
 # Tandem Trivia for iOS 📱🕹
-This is an iOS trivia app, built for Tandem's 2020 Apprentice Software Engineering code challenge. Information about this code challenge can be viewed [here](https://madeintandem.com/wp-content/uploads/2020/10/Tandem_Apprentice_Challenge_2020.zip).
+This is an iOS trivia app, built for Tandem's Apprentice Software Engineering code challenge. Information about this code challenge can be found [here](https://madeintandem.com/wp-content/uploads/2020/10/Tandem_Apprentice_Challenge_2020.zip).
 
-## How to play Tandem Trivia ⚡
+## How to Play Tandem Trivia ⚡
 * Clone the project to XCode 12 with this link: https://github.com/joshuabseitz/trivia.git
 * Select iPhone 11 Pro Max as your simulator, for best experience
 * Hit <b>cmd + r</b> and start answering questions!
@@ -9,7 +9,7 @@ This is an iOS trivia app, built for Tandem's 2020 Apprentice Software Engineeri
 ## Key Features of Tandem Trivia for iOS
 * 📇 Code parses JSON files to retrieve trivia data
 * 📐 Code architected with MVC pattern
-* 🎨 Custom designed UI, with classes built to support custom designs
+* 🎨 Custom built UI, with classes built to support custom designs of existing UI elements
 * 💾 Uses CoreData to save and persist highscores from users
 * ⚙️ Unit tests ensure that code is working correctly
 
