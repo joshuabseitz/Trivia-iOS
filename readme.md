@@ -1,4 +1,4 @@
-# 📱🕹 Tandem Trivia for iOS
+# Tandem Trivia for iOS 📱🕹
 This is an iOS trivia app, built for Tandem's 2020 Apprentice Software Engineering code challenge. Documentation of this code challenge can be viewed [here](https://madeintandem.com/wp-content/uploads/2020/10/Tandem_Apprentice_Challenge_2020.zip).
 
 ## Key Features of Tandem Trivia for iOS
