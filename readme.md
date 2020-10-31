@@ -1,5 +1,5 @@
 # Tandem Trivia for iOS 📱🕹
-This is a trivia app for iOS build for a Tandem code challenge. The app is built with [these assumptions and requirements](#tandem-trivia) in mind, in addition to features described [here](#key-features-of-tandem-trivia)
+This is an iOS trivia app built for a code challenge from Tandem. The app is built with [these assumptions and requirements](#tandem-trivia) in mind, in addition to features listed [here](#key-features-of-tandem-trivia)
 
 ## How to Play Tandem Trivia ⚡
 * Clone the project to XCode 12 with this link: https://github.com/joshuabseitz/trivia.git
