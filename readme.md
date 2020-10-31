@@ -8,7 +8,7 @@ This is an iOS trivia app, built for Tandem's Apprentice Software Engineering co
 
 ## Key Features of Tandem Trivia for iOS
 * 📇 Code parses JSON files to retrieve trivia data
-* 📐 Code architected with MVC pattern
+* 📐 Code OO and architected with MVC pattern
 * 🎨 Custom built UI, with classes built to support custom designs of existing UI elements
 * 💾 Uses CoreData to save and persist highscores from users
 * ⚙️ Unit tests ensure that code is working correctly
