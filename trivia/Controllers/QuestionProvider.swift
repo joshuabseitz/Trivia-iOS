@@ -10,9 +10,8 @@ import Foundation
 
 struct QuestionProvider {
 	
-	static var questions: [Question] {
-		// Read JSON
-		let data = readLocalFile(forName: "data")
+	static func getQuestions(fileName: String) -> [Question] {
+		let data = readLocalFile(forName: fileName)
 		let questions = try! JSONDecoder().decode([Question].self, from: data!)
 		return questions
 	}

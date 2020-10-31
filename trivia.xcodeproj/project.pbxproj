@@ -22,7 +22,8 @@
 		575513A425476E8400F48695 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 575513A225476E8400F48695 /* LaunchScreen.storyboard */; };
 		575513B22547817000F48695 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575513B12547817000F48695 /* PersistenceController.swift */; };
 		575514032548A3D100F48695 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575514022548A3D100F48695 /* Question.swift */; };
-		5755145E2548B25300F48695 /* triviaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755145D2548B25300F48695 /* triviaTests.swift */; };
+		5755145E2548B25300F48695 /* PersistenceControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755145D2548B25300F48695 /* PersistenceControllerTests.swift */; };
+		576BA3BD254DE8B4001CB06C /* QuestionProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576BA3BC254DE8B4001CB06C /* QuestionProviderTests.swift */; };
 		576D5F01254C6797004DD7B7 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576D5F00254C6797004DD7B7 /* ScoreViewController.swift */; };
 		576D5F04254C6E97004DD7B7 /* ScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576D5F02254C6E97004DD7B7 /* ScoreTableViewCell.swift */; };
 		576D5F05254C6E97004DD7B7 /* ScoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 576D5F03254C6E97004DD7B7 /* ScoreTableViewCell.xib */; };
@@ -62,8 +63,9 @@
 		575513B12547817000F48695 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		575514022548A3D100F48695 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		5755145B2548B25300F48695 /* triviaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = triviaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5755145D2548B25300F48695 /* triviaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = triviaTests.swift; sourceTree = "<group>"; };
+		5755145D2548B25300F48695 /* PersistenceControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceControllerTests.swift; sourceTree = "<group>"; };
 		5755145F2548B25300F48695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		576BA3BC254DE8B4001CB06C /* QuestionProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionProviderTests.swift; sourceTree = "<group>"; };
 		576D5F00254C6797004DD7B7 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		576D5F02254C6E97004DD7B7 /* ScoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScoreTableViewCell.swift; path = trivia/Views/ScoreTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		576D5F03254C6E97004DD7B7 /* ScoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ScoreTableViewCell.xib; path = trivia/Views/ScoreTableViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -201,8 +203,9 @@
 		5755145C2548B25300F48695 /* triviaTests */ = {
 			isa = PBXGroup;
 			children = (
-				5755145D2548B25300F48695 /* triviaTests.swift */,
+				5755145D2548B25300F48695 /* PersistenceControllerTests.swift */,
 				5755145F2548B25300F48695 /* Info.plist */,
+				576BA3BC254DE8B4001CB06C /* QuestionProviderTests.swift */,
 			);
 			path = triviaTests;
 			sourceTree = "<group>";
@@ -335,7 +338,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5755145E2548B25300F48695 /* triviaTests.swift in Sources */,
+				576BA3BD254DE8B4001CB06C /* QuestionProviderTests.swift in Sources */,
+				5755145E2548B25300F48695 /* PersistenceControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

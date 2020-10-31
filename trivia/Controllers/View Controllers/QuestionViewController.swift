@@ -46,7 +46,7 @@ class QuestionViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		questions = QuestionProvider.questions
+		questions = QuestionProvider.getQuestions(fileName: "data")
 		nextButton.isHidden = true
 		navigationController?.setNavigationBarHidden(true, animated: false)
 		updateChoiceButtons()

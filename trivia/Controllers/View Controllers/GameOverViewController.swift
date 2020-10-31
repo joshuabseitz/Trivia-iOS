@@ -37,7 +37,6 @@ class GameOverViewController: UIViewController {
 		score.scoreName = playerName
 		score.scorePoints = Int16(points)
 		PersistenceController.save(score)
-		print(PersistenceController.getAllScores())
 	}
 
 //MARK: - IBActions
