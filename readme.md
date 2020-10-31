@@ -3,13 +3,13 @@ This is an iOS trivia app, built for Tandem's 2020 Apprentice Software Engineeri
 
 ## Key Features of Tandem Trivia for iOS
 * 📇 Code parses JSON files to retrieve trivia data
-* 📐 Code architected with an MVC pattern
+* 📐 Code architected with MVC pattern
 * 🎨 Custom designed UI, with classes built to support custom designs
 * 💾 Uses CoreData to save and persist highscores from users
 
 ## 🎬 Tandem Trivia in Action
-Answering trivia Qs with a live score count!  | Saving a score with coredata!  
---|--
+Trivia Game | Saving Score
+:--:|--:
 <img src="/demo/questions.gif" width="220" height="480"/> | <img src="/demo/savescore.gif" width="220" height="480"/>
 
 ## Assumptions
