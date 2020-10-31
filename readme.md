@@ -4,7 +4,7 @@ This is an iOS trivia app, built for Tandem's 2020 Apprentice Software Engineeri
 ## How to play Tandem Trivia ⚡
 * Clone the project to XCode 12 with this link: https://github.com/joshuabseitz/trivia.git
 * Select iPhone 11 Pro Max as your simulator, for best experience
-* Hit <i>cmd + r</i> and start answering questions!
+* Hit <b>cmd + r</b> and start answering questions!
 
 ## Key Features of Tandem Trivia for iOS
 * 📇 Code parses JSON files to retrieve trivia data
