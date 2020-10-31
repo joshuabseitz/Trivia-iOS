@@ -9,7 +9,7 @@ This is an iOS trivia app, built for Tandem's 2020 Apprentice Software Engineeri
 
 ## 🎬 Tandem Trivia in Action
 Trivia Game | Saving Score
-:--:|--:
+:--:|:--:
 <img src="/demo/questions.gif" width="220" height="480"/> | <img src="/demo/savescore.gif" width="220" height="480"/>
 
 ## Assumptions
