@@ -1,6 +1,11 @@
-# Tandem Apprentice Software Engineer
-This is my entry for Tandem's 2020 Apprentice Software Engineer Code Challenge. It heeds to the following requirements, which were outlined in this [deck](https://madeintandem.com/wp-content/uploads/2020/10/Tandem_Apprentice_Challenge_2020.zip).
-My solution to this coding challenge was built in XCode 12 with Swift, using UIKit.
+# 📱🕹 Tandem Trivia for iOS
+This is an iOS trivia app, built for Tandem's 2020 Apprentice Software Engineering code challenge. Documentation of this code challenge can be viewed [here](https://madeintandem.com/wp-content/uploads/2020/10/Tandem_Apprentice_Challenge_2020.zip).
+
+## Key Features of Tandem Trivia for iOS
+* 📇 Code parses JSON files to retrieve trivia data
+* 📐 Code architected with an MVC pattern
+* 🎨 Custom designed UI, with classes built to support custom designs
+* 💾 Uses CoreData to save and persist highscores from users
 
 ## Assumptions
 * Round of triva has 10 questions
