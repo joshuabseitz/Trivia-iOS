@@ -6,7 +6,7 @@ This is an iOS trivia app, built for Tandem's Apprentice Software Engineering co
 * Select <b>iPhone 11 Pro Max</b> as your simulator, for optimal experience
 * Hit <b>cmd + r</b> and start answering questions!
 
-## Key Features of Tandem Trivia for iOS
+## Key Features of Tandem Trivia
 * 📇 Code parses JSON files to retrieve trivia data
 * 📐 Code OO and architected with MVC pattern
 * 🎨 Custom built UI, with classes built to support custom designs of existing UI elements
