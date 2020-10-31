@@ -64,9 +64,7 @@ class PersistenceControllerTests: XCTestCase {
 		} else {
 			
 			XCTFail("Could not create testScore to be deleted")
-			
+
 		}
 	}
-	
-	
 }
