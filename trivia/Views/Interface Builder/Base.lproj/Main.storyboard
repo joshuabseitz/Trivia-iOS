@@ -187,8 +187,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Game over - you scored 10 points." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDY-9s-NJu" customClass="VerticallyCenteredTextView" customModule="trivia" customModuleProvider="target">
+                                <rect key="frame" x="32" y="281" width="350" height="291"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <color key="textColor" red="0.76078431369999999" green="0.6588235294" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjm-gd-bAD">
-                                <rect key="frame" x="31" y="800" width="352" height="51"/>
+                                <rect key="frame" x="31" y="757" width="352" height="51"/>
                                 <color key="backgroundColor" red="0.76078431369999999" green="0.6588235294" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="352" id="5z1-aa-sNa"/>
@@ -202,8 +212,8 @@
                                     <segue destination="yp9-Lj-wdE" kind="presentation" id="dhq-iY-tYT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugb-in-NUZ">
-                                <rect key="frame" x="30" y="741" width="352" height="51"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugb-in-NUZ">
+                                <rect key="frame" x="31" y="698" width="352" height="51"/>
                                 <color key="backgroundColor" red="0.76078431369999999" green="0.6588235294" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="352" id="3Zz-7R-8MQ"/>
@@ -217,18 +227,8 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="Wga-T7-H8a"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Game over - you scored 10 points." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDY-9s-NJu" customClass="VerticallyCenteredTextView" customModule="trivia" customModuleProvider="target">
-                                <rect key="frame" x="32" y="281" width="350" height="334"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES"/>
-                                    <bool key="isElement" value="NO"/>
-                                </accessibility>
-                                <color key="textColor" red="0.76078431369999999" green="0.6588235294" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXf-nD-iE4">
-                                <rect key="frame" x="30" y="682" width="352" height="51"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXf-nD-iE4">
+                                <rect key="frame" x="31" y="639" width="352" height="51"/>
                                 <color key="backgroundColor" red="0.76078431369999999" green="0.6588235294" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="352" id="16x-xn-w5Q"/>
@@ -253,6 +253,7 @@
                             <constraint firstItem="YDY-9s-NJu" firstAttribute="top" secondItem="5hB-4H-DD9" secondAttribute="top" constant="281" id="Qtl-PU-kIK"/>
                             <constraint firstItem="5hB-4H-DD9" firstAttribute="trailing" secondItem="YDY-9s-NJu" secondAttribute="trailing" constant="32" id="Uc8-go-R8h"/>
                             <constraint firstItem="xjm-gd-bAD" firstAttribute="leading" secondItem="5hB-4H-DD9" secondAttribute="leading" constant="31" id="a60-Vv-Vpa"/>
+                            <constraint firstItem="xjm-gd-bAD" firstAttribute="bottom" secondItem="5hB-4H-DD9" secondAttribute="bottom" id="apn-NB-fZE"/>
                             <constraint firstItem="xjm-gd-bAD" firstAttribute="top" secondItem="ugb-in-NUZ" secondAttribute="bottom" constant="8" id="bAQ-mf-ed0"/>
                             <constraint firstItem="FXf-nD-iE4" firstAttribute="leading" secondItem="5hB-4H-DD9" secondAttribute="leading" constant="30" id="dLM-ZN-RKo"/>
                             <constraint firstItem="ugb-in-NUZ" firstAttribute="top" secondItem="FXf-nD-iE4" secondAttribute="bottom" constant="8" id="t5y-Wh-GiC"/>
