@@ -18,7 +18,7 @@ Trivia Game | Saving Score
 :--:|:--:
 <img src="/demo/questions.gif" width="220" height="480"/> | <img src="/demo/savescore.gif" width="220" height="480"/>
 
-# Tandem Trivia
+# Project Background
 This app was built for Tandem's (previously, DevMynd) Software Engineering Aprrentice application. Details for this code challenge can be found on [this slideshow](https://madeintandem.com/wp-content/uploads/2020/10/Tandem_Apprentice_Challenge_2020.zip).
 
 ## Assumptions
